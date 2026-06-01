@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice of Musembi — Book a Voice-Over</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #1A4FA0;
+  --blue-dark: #0D2F6B;
+  --orange: #E8721A;
+  --orange-light: #FF8C35;
+  --white: #FFFFFF;
+  --cream: #FDF8F3;
+  --dark: #0A1628;
+  --gray: #6B7A99;
+  --light: #F0F4FA;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  background: var(--blue-dark);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,114,26,0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,79,160,0.3), transparent 70%);
+  pointer-events: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+
+.nav-brand span { color: var(--orange); }
+
+.nav-contact {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
+.nav-contact strong {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(232,114,26,0.15);
+  border: 1px solid rgba(232,114,26,0.3);
+  color: var(--orange-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  margin-bottom: 32px;
+  animation: fadeDown 0.8s ease both;
+}
+
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  color: var(--white);
+  line-height: 0.95;
+  margin-bottom: 16px;
+  animation: fadeDown 0.8s ease 0.1s both;
+}
+
+.hero-title em {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.55);
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  font-weight: 300;
+  animation: fadeDown 0.8s ease 0.2s both;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 16px 40px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.2s, transform 0.2s;
+  animation: fadeDown 0.8s ease 0.3s both;
+}
+
+.hero-cta:hover {
+  background: var(--orange-light);
+  transform: translateY(-2px);
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 32px 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  z-index: 10;
+  animation: fadeDown 0.8s ease 0.4s both;
+}
+
+.hero-stat { text-align: center; }
+
+.hero-stat .num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--orange);
+  letter-spacing: 2px;
+}
+
+.hero-stat .label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-label span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(232,114,26,0.3), transparent);
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--blue-dark);
+  margin-bottom: 60px;
+  line-height: 1.1;
+}
+
+.section-title em {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2px;
+  background: rgba(0,0,0,0.08);
+}
+
+.service-item {
+  background: var(--white);
+  padding: 32px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  position: relative;
+  border-left: 3px solid transparent;
+}
+
+.service-item:hover, .service-item.selected {
+  background: var(--light);
+  border-left-color: var(--orange);
+}
+
+.service-item.selected { background: #EEF2F8; border-left-color: var(--blue); }
+
+.service-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+
+.service-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-ksh {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.price-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--blue);
+  letter-spacing: 1px;
+}
+
+.price-unit {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.select-btn {
+  margin-top: 16px;
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid var(--blue);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.select-btn:hover, .service-item.selected .select-btn {
+  background: var(--blue);
+  color: white;
+}
+
+/* BOOKING FORM */
+.booking {
+  background: var(--blue-dark);
+  padding: 100px 60px;
+}
+
+.booking-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.booking .section-label span { color: var(--orange-light); }
+.booking .section-title { color: var(--white); }
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  padding: 16px 20px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--orange);
+}
+
+.form-textarea { resize: vertical; min-height: 140px; }
+
+.form-select option { background: var(--blue-dark); color: var(--white); }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.selected-service-display {
+  background: rgba(232,114,26,0.1);
+  border: 1px solid rgba(232,114,26,0.25);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: none;
+}
+
+.selected-service-display.visible { display: block; }
+
+.selected-service-display p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 4px;
+}
+
+.selected-service-display strong {
+  color: var(--orange-light);
+  font-size: 18px;
+  font-family: 'DM Serif Display', serif;
+}
+
+/* PAYMENT */
+.payment-section {
+  margin-top: 40px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 32px;
+}
+
+.payment-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+.payment-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.payment-option {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.payment-option:hover, .payment-option.active {
+  border-color: var(--orange);
+  background: rgba(232,114,26,0.08);
+}
+
+.payment-option .pay-icon { font-size: 28px; margin-bottom: 8px; }
+.payment-option .pay-name { font-size: 13px; font-weight: 600; color: var(--white); }
+.payment-option .pay-detail { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+.amount-display {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.amount-display .label { font-size: 13px; color: rgba(255,255,255,0.5); }
+.amount-display .amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--orange-light);
+  letter-spacing: 2px;
+}
+
+.pay-btn {
+  width: 100%;
+  background: var(--orange);
+  color: white;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.pay-btn:hover {
+  background: var(--orange-light);
+  transform: translateY(-2px);
+}
+
+/* SUCCESS */
+.success-msg {
+  display: none;
+  background: rgba(26,79,160,0.2);
+  border: 1px solid rgba(26,79,160,0.4);
+  padding: 32px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.success-msg.visible { display: block; }
+.success-msg h3 { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--white); margin-bottom: 12px; }
+.success-msg p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+
+.footer-brand span { color: var(--orange); }
+
+.footer-info {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  text-align: right;
+}
+
+.footer-strip {
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-dark), var(--orange), var(--orange-light));
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 20px 24px; }
+  .hero-content { padding: 40px 24px; }
+  .hero-bottom { padding: 24px; gap: 24px; }
+  .services { padding: 60px 24px; }
+  .booking { padding: 60px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .payment-options { grid-template-columns: 1fr; }
+  footer { padding: 32px 24px; }
+  .footer-info { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <nav class="nav">
+    <div class="nav-brand">VOICE <span>OF MUSEMBI</span></div>
+    <div class="nav-contact">📞 <strong>0701 911 822</strong> &nbsp;|&nbsp; voiceofmusembi@gmail.com</div>
+  </nav>
+
+  <div class="hero-content">
+    <div class="hero-badge">🎙 Professional Voice-Over Services — Nairobi, Kenya</div>
+    <h1 class="hero-title">Your Brand.<br><em>My Voice.</em></h1>
+    <p class="hero-sub">Radio. TV. Skiza Tunes. IVR. Social Media. Documentary. Corporate. English. Swahili. Kikamba.</p>
+    <a href="#book" class="hero-cta">Book a Voice-Over →</a>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="hero-stat">
+      <div class="num">251K</div>
+      <div class="label">Facebook Followers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">157K</div>
+      <div class="label">TikTok Followers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">24HR</div>
+      <div class="label">Turnaround</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">3</div>
+      <div class="label">Languages</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label"><span>What I Offer</span></div>
+  <h2 class="section-title">Choose Your <em>Service</em></h2>
+
+  <div class="services-grid" id="servicesGrid">
+
+    <div class="service-item" data-service="Radio Commercial" data-price="8,000 – 15,000" data-amount="8000">
+      <div class="service-num">01</div>
+      <div class="service-name">Radio Commercial</div>
+      <div class="service-desc">Up to 60s broadcast-ready voice-over for radio advertising. 2 revisions included. Final WAV & MP3 delivered.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">8,000</span>
+        <span class="price-unit">– 15,000 / spot</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="TV Commercial" data-price="12,000 – 25,000" data-amount="12000">
+      <div class="service-num">02</div>
+      <div class="service-name">TV Commercial</div>
+      <div class="service-desc">Broadcast-ready voice-over for television commercials. Up to 60 seconds. 2 revisions. WAV & MP3 delivered.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">12,000</span>
+        <span class="price-unit">– 25,000 / spot</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Skiza Tune Recording" data-price="7,500" data-amount="7500">
+      <div class="service-num">03</div>
+      <div class="service-name">Skiza Tune Recording</div>
+      <div class="service-desc">Professional voice for your Safaricom Skiza ringback tone. Your brand message every time someone calls you.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">7,500</span>
+        <span class="price-unit">/ tune</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Corporate Narration" data-price="5,000" data-amount="5000">
+      <div class="service-num">04</div>
+      <div class="service-name">Corporate Narration</div>
+      <div class="service-desc">Company profiles, presentations, investor briefs, and corporate audio content. Up to 3 revisions included.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">5,000</span>
+        <span class="price-unit">/ minute</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Documentary Voice-Over" data-price="8,000" data-amount="8000">
+      <div class="service-num">05</div>
+      <div class="service-name">Documentary Voice-Over</div>
+      <div class="service-desc">Narrative voice-over for documentaries, short films, and factual audio productions. Warm, authoritative delivery.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">8,000</span>
+        <span class="price-unit">/ minute</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Social Media Voice-Over" data-price="6,000" data-amount="6000">
+      <div class="service-num">06</div>
+      <div class="service-name">Social Media Voice-Over</div>
+      <div class="service-desc">Facebook, TikTok, Instagram & YouTube adverts. 30–45 seconds. Delivered within 24 hours.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">6,000</span>
+        <span class="price-unit">/ clip (30–45s)</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="E-Learning & Training" data-price="20,000 – 50,000" data-amount="20000">
+      <div class="service-num">07</div>
+      <div class="service-name">E-Learning & Training</div>
+      <div class="service-desc">Course narration, instructional audio, and training material voice-overs. Clear, engaging delivery.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">20,000</span>
+        <span class="price-unit">– 50,000 / module</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Swahili / Bilingual / Kikamba" data-price="10,000 – 20,000" data-amount="10000">
+      <div class="service-num">08</div>
+      <div class="service-name">Swahili / Bilingual / Kikamba</div>
+      <div class="service-desc">Fluent delivery in English, Swahili, and Kikamba. Rare trilingual broadcast capability for your audience.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">10,000</span>
+        <span class="price-unit">– 20,000 / project</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Station ID / Jingle Tag" data-price="8,000 – 25,000" data-amount="8000">
+      <div class="service-num">09</div>
+      <div class="service-name">Station ID / Jingle Tag</div>
+      <div class="service-desc">Short station or brand identifiers for TV, radio, and online channels. Broadcast rights included.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">8,000</span>
+        <span class="price-unit">– 25,000 / ID</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+    <div class="service-item" data-service="Promo / Teaser Voice-Over" data-price="15,000" data-amount="15000">
+      <div class="service-num">10</div>
+      <div class="service-name">Promo / Teaser Voice-Over</div>
+      <div class="service-desc">Event promos, show teasers, product launches. High energy, punchy delivery. Broadcast rights included.</div>
+      <div class="service-price">
+        <span class="price-ksh">Ksh</span>
+        <span class="price-amount">15,000</span>
+        <span class="price-unit">/ promo</span>
+      </div>
+      <button class="select-btn" onclick="selectService(this)">Select →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking" id="book">
+  <div class="booking-inner">
+    <div class="section-label"><span>Place Your Order</span></div>
+    <h2 class="section-title">Book Your <em>Voice-Over</em></h2>
+
+    <div class="selected-service-display" id="selectedDisplay">
+      <p>Selected Service</p>
+      <strong id="selectedName">—</strong>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Service Type</label>
+      <select class="form-select" id="serviceSelect" onchange="updateFromSelect()">
+        <option value="">— Select a service —</option>
+        <option value="Radio Commercial|8000">Radio Commercial — Ksh 8,000</option>
+        <option value="TV Commercial|12000">TV Commercial — Ksh 12,000</option>
+        <option value="Skiza Tune Recording|7500">Skiza Tune Recording — Ksh 7,500</option>
+        <option value="Corporate Narration|5000">Corporate Narration — Ksh 5,000/min</option>
+        <option value="Documentary Voice-Over|8000">Documentary Voice-Over — Ksh 8,000/min</option>
+        <option value="Social Media Voice-Over|6000">Social Media Voice-Over — Ksh 6,000</option>
+        <option value="E-Learning & Training|20000">E-Learning & Training — Ksh 20,000</option>
+        <option value="Swahili / Bilingual / Kikamba|10000">Swahili / Bilingual / Kikamba — Ksh 10,000</option>
+        <option value="Station ID / Jingle Tag|8000">Station ID / Jingle Tag — Ksh 8,000</option>
+        <option value="Promo / Teaser Voice-Over|15000">Promo / Teaser Voice-Over — Ksh 15,000</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-input" placeholder="Full name" id="clientName">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-input" placeholder="07XX XXX XXX" id="clientPhone">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <input type="email" class="form-input" placeholder="your@email.com" id="clientEmail">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Business / Brand Name</label>
+      <input type="text" class="form-input" placeholder="Your business or brand name" id="clientBusiness">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Your Script or Brief</label>
+      <textarea class="form-textarea" placeholder="Paste your script here, or describe what you need. Include tone (serious, warm, energetic), language, and any specific instructions..." id="clientScript"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Preferred Language</label>
+      <select class="form-select" id="clientLang">
+        <option value="">— Select language —</option>
+        <option>English</option>
+        <option>Swahili</option>
+        <option>Kikamba</option>
+        <option>English & Swahili (Bilingual)</option>
+        <option>Other — specify in brief</option>
+      </select>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="payment-section">
+      <div class="payment-title">💳 Payment Method</div>
+
+      <div class="payment-options">
+        <div class="payment-option active" onclick="selectPayment(this, 'mpesa')">
+          <div class="pay-icon">📱</div>
+          <div class="pay-name">M-Pesa</div>
+          <div class="pay-detail">Send Money — 0701 911 822</div>
+        </div>
+        <div class="payment-option" onclick="selectPayment(this, 'kcb')">
+          <div class="pay-icon">🏦</div>
+          <div class="pay-name">KCB Bank</div>
+          <div class="pay-detail">A/C 1329048490</div>
+        </div>
+      </div>
+
+      <div class="amount-display">
+        <span class="label">Amount Due</span>
+        <span class="amount" id="amountDue">Select a service</span>
+      </div>
+
+      <div id="paymentInstructions" style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.6;"></div>
+
+      <button class="pay-btn" onclick="submitOrder()">Submit Order & Proceed to Pay →</button>
+    </div>
+
+    <div class="success-msg" id="successMsg">
+      <h3>🎙 Order Received!</h3>
+      <p>Thank you! Your order has been submitted successfully.<br><br>
+      Please complete your payment to <strong style="color:var(--orange-light)">0701 911 822</strong> (M-Pesa) or KCB A/C <strong style="color:var(--orange-light)">1329048490</strong>.<br><br>
+      Kelvin will be in touch within <strong style="color:var(--orange-light)">24 hours</strong> to confirm and begin recording. 🎶</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-strip"></div>
+<footer>
+  <div class="footer-brand">VOICE <span>OF MUSEMBI</span></div>
+  <div class="footer-info">
+    📞 0701 911 822 &nbsp;|&nbsp; voiceofmusembi@gmail.com<br>
+    @VoiceOfMusembi on Facebook & TikTok
+  </div>
+</footer>
+
+<script>
+let selectedAmount = 0;
+let selectedPayment = 'mpesa';
+
+function selectService(btn) {
+  document.querySelectorAll('.service-item').forEach(i => i.classList.remove('selected'));
+  const item = btn.closest('.service-item');
+  item.classList.add('selected');
+
+  const service = item.dataset.service;
+  const price = item.dataset.price;
+  selectedAmount = parseInt(item.dataset.amount);
+
+  document.getElementById('selectedDisplay').classList.add('visible');
+  document.getElementById('selectedName').textContent = service + ' — Ksh ' + price;
+  document.getElementById('amountDue').textContent = 'Ksh ' + selectedAmount.toLocaleString();
+
+  const sel = document.getElementById('serviceSelect');
+  for (let opt of sel.options) {
+    if (opt.value.startsWith(service)) { sel.value = opt.value; break; }
+  }
+
+  updatePaymentInstructions();
+  document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+}
+
+function updateFromSelect() {
+  const val = document.getElementById('serviceSelect').value;
+  if (!val) { selectedAmount = 0; document.getElementById('amountDue').textContent = 'Select a service'; return; }
+  const parts = val.split('|');
+  selectedAmount = parseInt(parts[1]);
+  document.getElementById('amountDue').textContent = 'Ksh ' + selectedAmount.toLocaleString();
+  document.getElementById('selectedDisplay').classList.add('visible');
+  document.getElementById('selectedName').textContent = parts[0] + ' — Ksh ' + selectedAmount.toLocaleString();
+  updatePaymentInstructions();
+}
+
+function selectPayment(el, method) {
+  document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active'));
+  el.classList.add('active');
+  selectedPayment = method;
+  updatePaymentInstructions();
+}
+
+function updatePaymentInstructions() {
+  const el = document.getElementById('paymentInstructions');
+  if (selectedPayment === 'mpesa') {
+    el.innerHTML = '📱 <strong style="color:white">M-Pesa Instructions:</strong> Go to M-Pesa → Send Money → Enter <strong style="color:#FF8C35">0701 911 822</strong> → Enter amount → Use your name as reference.';
+  } else {
+    el.innerHTML = '🏦 <strong style="color:white">KCB Bank Instructions:</strong> Bank: KCB Kenya → Till: <strong style="color:#FF8C35">522 522</strong> → Account: <strong style="color:#FF8C35">1329048490</strong> → Use your name as reference.';
+  }
+}
+
+function submitOrder() {
+  const name = document.getElementById('clientName').value.trim();
+  const phone = document.getElementById('clientPhone').value.trim();
+  const script = document.getElementById('clientScript').value.trim();
+  const service = document.getElementById('serviceSelect').value;
+
+  if (!name || !phone || !service || !script) {
+    alert('Please fill in your name, phone, service, and script/brief before submitting.');
+    return;
+  }
+
+  const msg = encodeURIComponent(
+    `*New Voice-Over Order — Voice of Musembi*\n\n` +
+    `*Name:* ${name}\n` +
+    `*Phone:* ${phone}\n` +
+    `*Email:* ${document.getElementById('clientEmail').value}\n` +
+    `*Business:* ${document.getElementById('clientBusiness').value}\n` +
+    `*Service:* ${service.split('|')[0]}\n` +
+    `*Language:* ${document.getElementById('clientLang').value}\n` +
+    `*Amount:* Ksh ${selectedAmount.toLocaleString()}\n` +
+    `*Payment:* ${selectedPayment === 'mpesa' ? 'M-Pesa' : 'KCB Bank'}\n\n` +
+    `*Script/Brief:*\n${script}`
+  );
+
+  document.getElementById('successMsg').classList.add('visible');
+  window.open(`https://wa.me/254701911822?text=${msg}`, '_blank');
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+updatePaymentInstructions();
+</script>
+</body>
+</html>
