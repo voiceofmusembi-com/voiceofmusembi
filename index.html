@@ -310,6 +310,30 @@ body {
   transform: translateY(-2px);
 }
 
+.payment-info {
+  background: rgba(232,114,26,0.1);
+  border-left: 4px solid var(--orange);
+  padding: 20px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+}
+
+.payment-info strong {
+  color: var(--orange-light);
+  display: block;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.payment-method {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
 .contact-strip {
   background: var(--blue);
   padding: 40px;
@@ -488,25 +512,25 @@ footer strong { color: rgba(255,255,255,0.6); }
 
   <div class="services-grid">
 
-    <div class="service-item" onclick="selectService('Radio Commercial — From 8,000 Ksh')">
+    <div class="service-item" onclick="selectService('Radio Commercial — From 8,000 Ksh (30-45 seconds)')">
       <div class="s-num">01</div>
       <div class="s-name">Radio Commercial</div>
-      <div class="s-desc">Up to 60s broadcast-ready radio ad. 2 revisions. WAV & MP3.</div>
-      <div class="s-price"><span class="s-amount">From 8,000</span><span class="s-unit">Ksh</span></div>
+      <div class="s-desc">Broadcast-ready radio ad. 2 revisions. WAV & MP3 delivered.</div>
+      <div class="s-price"><span class="s-amount">From 8,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
     </div>
 
-    <div class="service-item orange" onclick="selectService('TV Commercial — From 12,000 Ksh')">
+    <div class="service-item orange" onclick="selectService('TV Commercial — From 12,000 Ksh (30-45 seconds)')">
       <div class="s-num">02</div>
       <div class="s-name">TV Commercial</div>
-      <div class="s-desc">Broadcast-ready voice-over for television. Up to 60 seconds.</div>
-      <div class="s-price"><span class="s-amount">From 12,000</span><span class="s-unit">Ksh</span></div>
+      <div class="s-desc">Broadcast-ready TV voice-over. Professional delivery.</div>
+      <div class="s-price"><span class="s-amount">From 12,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
     </div>
 
-    <div class="service-item" onclick="selectService('Skiza Tune Recording — From 7,500 Ksh')">
+    <div class="service-item" onclick="selectService('Skiza Tune Recording — 7,500 Ksh')">
       <div class="s-num">03</div>
       <div class="s-name">Skiza Tune Recording</div>
       <div class="s-desc">Professional Safaricom ringback tone for your business.</div>
-      <div class="s-price"><span class="s-amount">From 7,500</span><span class="s-unit">Ksh</span></div>
+      <div class="s-price"><span class="s-amount">7,500</span><span class="s-unit">Ksh</span></div>
     </div>
 
     <div class="service-item orange" onclick="selectService('IVR / Phone System — From 15,000 Ksh')">
@@ -516,32 +540,32 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="s-price"><span class="s-amount">From 15,000</span><span class="s-unit">Ksh</span></div>
     </div>
 
-    <div class="service-item" onclick="selectService('Social Media Voice-Over — From 6,000 Ksh')">
+    <div class="service-item" onclick="selectService('Social Media Voice-Over — From 6,000 Ksh (30-45 seconds)')">
       <div class="s-num">05</div>
       <div class="s-name">Social Media Voice-Over</div>
-      <div class="s-desc">Facebook, TikTok, Instagram & YouTube ads. 30–45 seconds.</div>
-      <div class="s-price"><span class="s-amount">From 6,000</span><span class="s-unit">Ksh</span></div>
+      <div class="s-desc">Facebook, TikTok, Instagram & YouTube ads.</div>
+      <div class="s-price"><span class="s-amount">From 6,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
     </div>
 
-    <div class="service-item orange" onclick="selectService('Corporate Narration — From 5,000 Ksh')">
+    <div class="service-item orange" onclick="selectService('Corporate Narration — From 7,000 Ksh (30-45 seconds)')">
       <div class="s-num">06</div>
       <div class="s-name">Corporate Narration</div>
       <div class="s-desc">Company profiles, presentations, briefs. Professional delivery.</div>
-      <div class="s-price"><span class="s-amount">From 5,000</span><span class="s-unit">Ksh</span></div>
+      <div class="s-price"><span class="s-amount">From 7,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
     </div>
 
-    <div class="service-item" onclick="selectService('Documentary Voice-Over — From 8,000 Ksh')">
+    <div class="service-item" onclick="selectService('Documentary Voice-Over — From 10,000 Ksh (per minute)')">
       <div class="s-num">07</div>
       <div class="s-name">Documentary Voice-Over</div>
       <div class="s-desc">Documentaries, short films. Narrative expertise.</div>
-      <div class="s-price"><span class="s-amount">From 8,000</span><span class="s-unit">Ksh</span></div>
+      <div class="s-price"><span class="s-amount">From 10,000</span><span class="s-unit">Ksh/min</span></div>
     </div>
 
-    <div class="service-item orange" onclick="selectService('Announcement / Short Clip — From 3,000 Ksh')">
+    <div class="service-item orange" onclick="selectService('Announcement / Short Clip — From 3,000 Ksh (30 seconds)')">
       <div class="s-num">08</div>
       <div class="s-name">Announcement / Short Clip</div>
-      <div class="s-desc">Event announcements, church announcements. Under 30 seconds.</div>
-      <div class="s-price"><span class="s-amount">From 3,000</span><span class="s-unit">Ksh</span></div>
+      <div class="s-desc">Event announcements, church announcements.</div>
+      <div class="s-price"><span class="s-amount">From 3,000</span><span class="s-unit">Ksh (30 sec)</span></div>
     </div>
 
     <div class="service-item" onclick="selectService('E-Learning & Training — From 20,000 Ksh')">
@@ -585,14 +609,14 @@ footer strong { color: rgba(255,255,255,0.6); }
         <label class="form-label">Service Type</label>
         <select class="form-select" id="service" required>
           <option value="">— Select a service —</option>
-          <option>Radio Commercial — From 8,000 Ksh</option>
-          <option>TV Commercial — From 12,000 Ksh</option>
-          <option>Skiza Tune Recording — From 7,500 Ksh</option>
+          <option>Radio Commercial — From 8,000 Ksh (30-45 seconds)</option>
+          <option>TV Commercial — From 12,000 Ksh (30-45 seconds)</option>
+          <option>Skiza Tune Recording — 7,500 Ksh</option>
           <option>IVR / Phone System — From 15,000 Ksh</option>
-          <option>Social Media Voice-Over — From 6,000 Ksh</option>
-          <option>Corporate Narration — From 5,000 Ksh</option>
-          <option>Documentary Voice-Over — From 8,000 Ksh</option>
-          <option>Announcement / Short Clip — From 3,000 Ksh</option>
+          <option>Social Media Voice-Over — From 6,000 Ksh (30-45 seconds)</option>
+          <option>Corporate Narration — From 7,000 Ksh (30-45 seconds)</option>
+          <option>Documentary Voice-Over — From 10,000 Ksh (per minute)</option>
+          <option>Announcement / Short Clip — From 3,000 Ksh (30 seconds)</option>
           <option>E-Learning & Training — From 20,000 Ksh</option>
         </select>
       </div>
@@ -613,8 +637,28 @@ footer strong { color: rgba(255,255,255,0.6); }
         <textarea class="form-textarea" id="script" placeholder="Paste your script here or describe what you need. Include tone, language, and special instructions..." required></textarea>
       </div>
 
-      <button type="submit" class="submit-btn">Submit Order & Pay →</button>
+      <button type="submit" class="submit-btn">Send Order to WhatsApp →</button>
     </form>
+
+    <div class="payment-info">
+      <div style="margin-bottom: 16px;">
+        <strong>💰 Payment Methods</strong>
+        We accept both M-Pesa and Bank Transfer. Choose the method that works best for you.
+      </div>
+      
+      <div class="payment-method">
+        <strong>📱 M-Pesa (Send Money)</strong><br>
+        Number: <strong style="color: var(--orange-light); font-size: 16px;">0701 911 822</strong><br>
+        <span style="font-size: 12px;">Use your name as reference</span>
+      </div>
+
+      <div class="payment-method">
+        <strong>🏦 KCB Bank</strong><br>
+        Account: <strong style="color: var(--orange-light); font-size: 16px;">1329048490</strong><br>
+        Till: <strong style="color: var(--orange-light); font-size: 16px;">522 522</strong><br>
+        <span style="font-size: 12px;">Use your name as reference</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -662,9 +706,10 @@ function handleSubmit(event) {
     `*Script/Brief:*\n${script}`
   );
   
+  // Send directly to business WhatsApp
   window.open(`https://wa.me/254788270218?text=${message}`, '_blank');
   
-  alert('Order sent! You will be contacted shortly with payment details.');
+  alert('Order sent to WhatsApp! Please proceed with payment to either M-Pesa (0701 911 822) or KCB (1329048490). We will contact you to confirm.');
   document.querySelector('form').reset();
 }
 </script>
