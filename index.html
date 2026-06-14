@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voice of Musembi — Professional Voice-Over Services</title>
+<title>Voice of Musembi — Audio Production Studio & Services</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -63,7 +63,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .hero-badge {
@@ -89,10 +89,17 @@ body {
 
 .hero-title em { color: var(--orange); font-style: italic; }
 
+.hero-subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
 .hero-sub {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(255,255,255,0.55);
-  max-width: 600px;
+  max-width: 700px;
   line-height: 1.6;
   margin: 0 auto 32px;
   font-weight: 300;
@@ -108,6 +115,7 @@ body {
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.2s;
+  margin: 0 8px;
 }
 
 .hero-cta:hover {
@@ -139,105 +147,186 @@ body {
 
 .section-title em { color: var(--orange); font-style: italic; }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.service-category {
+  background: var(--white);
+  padding: 32px;
+  border-top: 4px solid var(--blue);
+  box-shadow: 0 4px 12px rgba(26,79,160,0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.service-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26,79,160,0.15);
+}
+
+.service-category.orange { border-top-color: var(--orange); }
+
+.cat-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cat-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--blue-dark);
+  margin-bottom: 12px;
+}
+
+.cat-desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.cat-features {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.cat-features strong {
+  color: var(--orange);
+}
+
+.service-details {
+  background: var(--light-blue);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.service-details h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--blue-dark);
+  margin-bottom: 16px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.service-item {
+  background: var(--white);
+  padding: 16px;
+  border-left: 3px solid var(--orange);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.service-item strong {
+  display: block;
+  color: var(--blue-dark);
+  margin-bottom: 6px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.price-card {
+  background: var(--white);
+  padding: 28px;
+  border: 2px solid var(--light-blue);
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.price-card:hover {
+  border-color: var(--orange);
+  box-shadow: 0 8px 20px rgba(232,114,26,0.1);
+}
+
+.price-service {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  color: var(--blue-dark);
+  margin-bottom: 12px;
+}
+
+.price-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+
+.price-detail {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 16px;
+}
+
+.price-desc {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  min-height: 50px;
+}
+
+.price-btn {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.price-btn:hover {
+  background: var(--blue-dark);
+}
+
 .demos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
   margin-bottom: 40px;
 }
 
 .demo-card {
   background: var(--white);
-  padding: 24px;
+  padding: 20px;
   border-left: 4px solid var(--orange);
-  box-shadow: 0 2px 12px rgba(26,79,160,0.08);
-  transition: transform 0.2s;
+  box-shadow: 0 2px 8px rgba(26,79,160,0.08);
 }
-
-.demo-card:hover { transform: translateY(-4px); }
 
 .demo-slot {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 2px;
   color: var(--orange);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .demo-player {
   background: var(--light-blue);
-  padding: 14px;
-  margin-bottom: 12px;
+  padding: 12px;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.demo-player audio { width: 100%; height: 32px; }
-
-.demo-note {
-  font-size: 12px;
-  color: var(--gray);
-  line-height: 1.5;
-  font-style: italic;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.service-item {
-  background: var(--white);
-  padding: 24px;
-  border-top: 3px solid var(--blue);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.service-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(26,79,160,0.15);
-}
-
-.service-item.orange { border-top-color: var(--orange); }
-
-.s-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--orange);
-  margin-bottom: 6px;
-}
-
-.s-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  color: var(--blue-dark);
-  margin-bottom: 8px;
-}
-
-.s-desc {
-  font-size: 13px;
-  color: var(--gray);
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-.s-price {
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
-}
-
-.s-amount {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  color: var(--blue);
-}
-
-.s-unit { font-size: 12px; color: var(--gray); }
+.demo-player audio { width: 100%; height: 28px; }
 
 .booking {
   background: var(--blue-dark);
@@ -310,30 +399,6 @@ body {
   transform: translateY(-2px);
 }
 
-.payment-info {
-  background: rgba(232,114,26,0.1);
-  border-left: 4px solid var(--orange);
-  padding: 20px;
-  margin-top: 24px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.8;
-}
-
-.payment-info strong {
-  color: var(--orange-light);
-  display: block;
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.payment-method {
-  background: rgba(255,255,255,0.05);
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 4px;
-}
-
 .contact-strip {
   background: var(--blue);
   padding: 40px;
@@ -381,7 +446,8 @@ footer strong { color: rgba(255,255,255,0.6); }
   .booking { padding: 40px 24px; }
   .form-row { grid-template-columns: 1fr; }
   .contact-items { gap: 16px; }
-  .demos-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .services-grid { grid-template-columns: 1fr; }
+  .hero-cta { display: block; margin: 8px 0; }
 }
 </style>
 </head>
@@ -389,19 +455,20 @@ footer strong { color: rgba(255,255,255,0.6); }
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">🎙 Professional Voice-Over Services</div>
-    <h1 class="hero-title">Your Brand.<br><em>My Voice.</em></h1>
-    <p class="hero-sub">Radio. TV. Skiza. IVR. Social Media. Corporate. Documentary. English. Swahili. Kikamba.</p>
-    <a href="#book" class="hero-cta">Book Now →</a>
+    <div class="hero-badge">🎙 Audio Production Studio</div>
+    <h1 class="hero-title">Your Brand.<br><em>Our Sound.</em></h1>
+    <p class="hero-subtitle">Professional Audio Production & Voice Services</p>
+    <p class="hero-sub">From voice-overs to full audio production. Voice recording • Audio editing • Digi drops • Training • Radio production • Audiovisual content.</p>
+    <a href="#services" class="hero-cta">Explore Services →</a>
+    <a href="#book" class="hero-cta" style="background: rgba(255,255,255,0.2); border: 1px solid var(--orange);">Book Now →</a>
   </div>
 </section>
 
 <section class="section">
-  <div class="section-label">Hear The Quality</div>
+  <div class="section-label">Listen & Explore</div>
   <h2 class="section-title">Demo <em>Voice-Overs</em></h2>
   
   <div class="demos-grid">
-    
     <div class="demo-card">
       <div class="demo-slot">DEMO 01</div>
       <div class="demo-player">
@@ -409,7 +476,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-1.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -419,7 +485,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-2.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -429,7 +494,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-3.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -439,7 +503,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-4.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -449,7 +512,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-5.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -459,7 +521,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-6.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -469,7 +530,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-7.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -479,7 +539,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-8.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -489,7 +548,6 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-9.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
     </div>
 
     <div class="demo-card">
@@ -499,89 +557,202 @@ footer strong { color: rgba(255,255,255,0.6); }
           <source src="demo-10.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="demo-note">Your demo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-label">What We Offer</div>
+  <h2 class="section-title">Our <em>Services</em></h2>
+  <p style="font-size:14px;color:var(--gray);margin-bottom:40px;text-align:center;">Click any service to book →</p>
+
+  <div class="services-grid">
+
+    <div class="service-category" onclick="selectService('Commercial Voice-Overs — From 8,000 Ksh (30-45 seconds)')">
+      <div class="cat-icon">📻</div>
+      <div class="cat-title">Commercial Voice-Overs</div>
+      <div class="cat-desc">Professional radio & TV ads</div>
+      <div class="cat-features"><strong>From 8,000 Ksh</strong><br>Radio ads • TV commercials • Social media • Product promos</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Corporate Narration — From 10,000 Ksh')">
+      <div class="cat-icon">🏢</div>
+      <div class="cat-title">Corporate Narration</div>
+      <div class="cat-desc">Professional business content</div>
+      <div class="cat-features"><strong>From 10,000 Ksh</strong><br>Company profiles • Presentations • Explainer videos • Training</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Radio & Broadcast Imaging — From 5,000 Ksh')">
+      <div class="cat-icon">📡</div>
+      <div class="cat-title">Radio & Broadcast</div>
+      <div class="cat-desc">Station imaging & promos</div>
+      <div class="cat-features"><strong>From 5,000 Ksh</strong><br>Station IDs • Show promos • Intros • Sweepers & liners</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Digi Drops & Audio Stings — From 5,000 Ksh')">
+      <div class="cat-icon">⚡</div>
+      <div class="cat-title">Digi Drops</div>
+      <div class="cat-desc">Audio stings with effects</div>
+      <div class="cat-features"><strong>From 5,000 Ksh</strong><br>Transitions • Sound design • Audio branding • Effects</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Documentary Narration — From 8,000 Ksh')">
+      <div class="cat-icon">🎬</div>
+      <div class="cat-title">Documentary</div>
+      <div class="cat-desc">Professional storytelling</div>
+      <div class="cat-features"><strong>From 8,000 Ksh</strong><br>Documentaries • Educational • Features • Environmental stories</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Event Promotions — From 7,000 Ksh')">
+      <div class="cat-icon">🎪</div>
+      <div class="cat-title">Event Promotions</div>
+      <div class="cat-desc">Concert & festival promos</div>
+      <div class="cat-features"><strong>From 7,000 Ksh</strong><br>Concert promos • Festival ads • Roadshow campaigns • Launches</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Public Announcements — From 5,000 Ksh')">
+      <div class="cat-icon">📢</div>
+      <div class="cat-title">Public Announcements</div>
+      <div class="cat-desc">Awareness & PSA content</div>
+      <div class="cat-features"><strong>From 5,000 Ksh</strong><br>Government campaigns • NGO awareness • Safety messages • PSAs</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Real Estate Voice-Overs — From 8,000 Ksh')">
+      <div class="cat-icon">🏠</div>
+      <div class="cat-title">Real Estate VO</div>
+      <div class="cat-desc">Property & land promotion</div>
+      <div class="cat-features"><strong>From 8,000 Ksh</strong><br>Property showcases • Sales promos • Airbnb • Virtual tours</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('News & Presentation — From 6,000 Ksh')">
+      <div class="cat-icon">📰</div>
+      <div class="cat-title">News & Presentation</div>
+      <div class="cat-desc">Bulletin & news content</div>
+      <div class="cat-features"><strong>From 6,000 Ksh</strong><br>News bulletins • Sports news • Weather • Feature presentation</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('E-Learning Narration — From 10,000 Ksh')">
+      <div class="cat-icon">📚</div>
+      <div class="cat-title">E-Learning</div>
+      <div class="cat-desc">Educational content</div>
+      <div class="cat-features"><strong>From 10,000 Ksh</strong><br>Online courses • Modules • School content • Training programs</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Audiobook Narration — From 30,000 Ksh')">
+      <div class="cat-icon">📖</div>
+      <div class="cat-title">Audiobook</div>
+      <div class="cat-desc">Professional book recording</div>
+      <div class="cat-features"><strong>From 30,000 Ksh</strong><br>Per chapter • Broadcast quality • Full narration</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Social Media Content — From 6,000 Ksh')">
+      <div class="cat-icon">📱</div>
+      <div class="cat-title">Social Media</div>
+      <div class="cat-desc">TikTok • YouTube • Reels</div>
+      <div class="cat-features"><strong>From 6,000 Ksh</strong><br>TikTok VO • YouTube narration • Reels • Facebook video</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('News Anchoring — From 12,000 Ksh')">
+      <div class="cat-icon">🎙️</div>
+      <div class="cat-title">News Anchoring</div>
+      <div class="cat-desc">Professional news delivery</div>
+      <div class="cat-features"><strong>From 12,000 Ksh</strong><br>News anchor voice • Broadcast delivery • Professional tone</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Event MC Services — From 15,000 Ksh')">
+      <div class="cat-icon">🎤</div>
+      <div class="cat-title">Event MC</div>
+      <div class="cat-desc">Live event hosting</div>
+      <div class="cat-features"><strong>From 15,000 Ksh</strong><br>Event hosting • Conference MC • Product launches • Ceremonies</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Radio Production — From 20,000 Ksh')">
+      <div class="cat-icon">🎚️</div>
+      <div class="cat-title">Radio Production</div>
+      <div class="cat-desc">Full radio production</div>
+      <div class="cat-features"><strong>From 20,000 Ksh</strong><br>Station packages • Full imaging • Audio production • Editing</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Script Writing — From 5,000 Ksh')">
+      <div class="cat-icon">✍️</div>
+      <div class="cat-title">Script Writing</div>
+      <div class="cat-desc">Professional script creation</div>
+      <div class="cat-features"><strong>From 5,000 Ksh</strong><br>Commercial scripts • VO scripts • Radio copy • Ad copy</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Audio Editing & Production — From 3,000 Ksh')">
+      <div class="cat-icon">🎛️</div>
+      <div class="cat-title">Audio Editing</div>
+      <div class="cat-desc">Professional sound editing</div>
+      <div class="cat-features"><strong>From 3,000 Ksh</strong><br>Mastering • Effects • Mixing • Audio production</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Skiza Tune Recording — 7,500 Ksh')">
+      <div class="cat-icon">📱</div>
+      <div class="cat-title">Skiza Tune</div>
+      <div class="cat-desc">Safaricom ringback tone</div>
+      <div class="cat-features"><strong>7,500 Ksh</strong><br>Professional • Ready to publish • Brand voice</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Audiovisual Production — From 15,000 Ksh')">
+      <div class="cat-icon">🎬</div>
+      <div class="cat-title">Audiovisual</div>
+      <div class="cat-desc">Voice + video + graphics</div>
+      <div class="cat-features"><strong>From 15,000 Ksh</strong><br>Motion graphics • Video editing • Full production</div>
+    </div>
+
+    <div class="service-category" onclick="selectService('Voice Coaching — From 10,000 Ksh')">
+      <div class="cat-icon">👥</div>
+      <div class="cat-title">Voice Coaching</div>
+      <div class="cat-desc">Professional voice training</div>
+      <div class="cat-features"><strong>From 10,000 Ksh</strong><br>Technique • Delivery • On-air training • Personalized coaching</div>
+    </div>
+
+    <div class="service-category orange" onclick="selectService('Audio Production Training — From 20,000 Ksh')">
+      <div class="cat-icon">🎓</div>
+      <div class="cat-title">Training Programs</div>
+      <div class="cat-desc">Audio & voice training</div>
+      <div class="cat-features"><strong>From 20,000 Ksh</strong><br>Recording • Editing • Production • Brand voice training</div>
     </div>
 
   </div>
 </section>
 
 <section class="section">
-  <div class="section-label">What I Offer</div>
-  <h2 class="section-title">All <em>Services</em></h2>
-  <p style="font-size:14px;color:var(--gray);margin-bottom:30px;">Click any service to book →</p>
+  <div class="section-label">Work With Us</div>
+  <h2 class="section-title">Service <em>Packages</em></h2>
 
-  <div class="services-grid">
-
-    <div class="service-item" onclick="selectService('Radio Commercial — From 8,000 Ksh (30-45 seconds)')">
-      <div class="s-num">01</div>
-      <div class="s-name">Radio Commercial</div>
-      <div class="s-desc">Broadcast-ready radio ad. 2 revisions. WAV & MP3 delivered.</div>
-      <div class="s-price"><span class="s-amount">From 8,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
+  <div class="pricing-grid">
+    <div class="price-card" onclick="selectService('Monthly Retainer — 35,000 Ksh')">
+      <div class="price-service">Monthly Retainer</div>
+      <div class="price-amount">35,000</div>
+      <div class="price-detail">Ksh / month</div>
+      <div class="price-desc">All voice-over services • Unlimited requests • Priority support • Fast turnaround</div>
+      <button class="price-btn">Select</button>
     </div>
 
-    <div class="service-item orange" onclick="selectService('TV Commercial — From 12,000 Ksh (30-45 seconds)')">
-      <div class="s-num">02</div>
-      <div class="s-name">TV Commercial</div>
-      <div class="s-desc">Broadcast-ready TV voice-over. Professional delivery.</div>
-      <div class="s-price"><span class="s-amount">From 12,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
+    <div class="price-card" onclick="selectService('Per-Project Billing — Custom pricing')">
+      <div class="price-service">Per-Project</div>
+      <div class="price-amount">Flexible</div>
+      <div class="price-detail">Based on project</div>
+      <div class="price-desc">Pay as you go • Custom quotes • No commitment • Flexible volume</div>
+      <button class="price-btn">Get Quote</button>
     </div>
 
-    <div class="service-item" onclick="selectService('Skiza Tune Recording — 7,500 Ksh')">
-      <div class="s-num">03</div>
-      <div class="s-name">Skiza Tune Recording</div>
-      <div class="s-desc">Professional Safaricom ringback tone for your business.</div>
-      <div class="s-price"><span class="s-amount">7,500</span><span class="s-unit">Ksh</span></div>
+    <div class="price-card" onclick="selectService('Training Package — From 10,000 Ksh')">
+      <div class="price-service">Training</div>
+      <div class="price-amount">Varies</div>
+      <div class="price-detail">Per session/course</div>
+      <div class="price-desc">Voice coaching • Production training • Brand voice consulting • Talent training</div>
+      <button class="price-btn">Enroll</button>
     </div>
-
-    <div class="service-item orange" onclick="selectService('IVR / Phone System — From 15,000 Ksh')">
-      <div class="s-num">04</div>
-      <div class="s-name">IVR / Phone System</div>
-      <div class="s-desc">Full phone menu recording with all prompts.</div>
-      <div class="s-price"><span class="s-amount">From 15,000</span><span class="s-unit">Ksh</span></div>
-    </div>
-
-    <div class="service-item" onclick="selectService('Social Media Voice-Over — From 6,000 Ksh (30-45 seconds)')">
-      <div class="s-num">05</div>
-      <div class="s-name">Social Media Voice-Over</div>
-      <div class="s-desc">Facebook, TikTok, Instagram & YouTube ads.</div>
-      <div class="s-price"><span class="s-amount">From 6,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
-    </div>
-
-    <div class="service-item orange" onclick="selectService('Corporate Narration — From 7,000 Ksh (30-45 seconds)')">
-      <div class="s-num">06</div>
-      <div class="s-name">Corporate Narration</div>
-      <div class="s-desc">Company profiles, presentations, briefs. Professional delivery.</div>
-      <div class="s-price"><span class="s-amount">From 7,000</span><span class="s-unit">Ksh (30-45 sec)</span></div>
-    </div>
-
-    <div class="service-item" onclick="selectService('Documentary Voice-Over — From 10,000 Ksh (per minute)')">
-      <div class="s-num">07</div>
-      <div class="s-name">Documentary Voice-Over</div>
-      <div class="s-desc">Documentaries, short films. Narrative expertise.</div>
-      <div class="s-price"><span class="s-amount">From 10,000</span><span class="s-unit">Ksh/min</span></div>
-    </div>
-
-    <div class="service-item orange" onclick="selectService('Announcement / Short Clip — From 3,000 Ksh (30 seconds)')">
-      <div class="s-num">08</div>
-      <div class="s-name">Announcement / Short Clip</div>
-      <div class="s-desc">Event announcements, church announcements.</div>
-      <div class="s-price"><span class="s-amount">From 3,000</span><span class="s-unit">Ksh (30 sec)</span></div>
-    </div>
-
-    <div class="service-item" onclick="selectService('E-Learning & Training — From 20,000 Ksh')">
-      <div class="s-num">09</div>
-      <div class="s-name">E-Learning & Training</div>
-      <div class="s-desc">Course narration, instructional audio, training modules.</div>
-      <div class="s-price"><span class="s-amount">From 20,000</span><span class="s-unit">Ksh</span></div>
-    </div>
-
   </div>
 </section>
 
 <section class="booking" id="book">
   <div class="booking-inner">
-    <div class="section-label">Ready To Order?</div>
-    <h2 class="section-title">Book Your <em>Voice-Over</em></h2>
+    <div class="section-label">Ready to Book?</div>
+    <h2 class="section-title">Get <em>Started</em></h2>
 
     <form onsubmit="handleSubmit(event)">
       <div class="form-row">
@@ -601,23 +772,37 @@ footer strong { color: rgba(255,255,255,0.6); }
       </div>
 
       <div class="form-group">
-        <label class="form-label">Business / Brand Name</label>
-        <input type="text" class="form-input" id="business" placeholder="Your business name" required>
+        <label class="form-label">Company / Brand Name</label>
+        <input type="text" class="form-input" id="business" placeholder="Your company or brand" required>
       </div>
 
       <div class="form-group">
         <label class="form-label">Service Type</label>
         <select class="form-select" id="service" required>
           <option value="">— Select a service —</option>
-          <option>Radio Commercial — From 8,000 Ksh (30-45 seconds)</option>
-          <option>TV Commercial — From 12,000 Ksh (30-45 seconds)</option>
+          <option>Commercial Voice-Overs — From 8,000 Ksh (30-45 seconds)</option>
+          <option>Corporate Narration — From 10,000 Ksh</option>
+          <option>Radio & Broadcast Imaging — From 5,000 Ksh</option>
+          <option>Digi Drops & Audio Stings — From 5,000 Ksh</option>
+          <option>Documentary Narration — From 8,000 Ksh</option>
+          <option>Event Promotions — From 7,000 Ksh</option>
+          <option>Public Announcements — From 5,000 Ksh</option>
+          <option>Real Estate Voice-Overs — From 8,000 Ksh</option>
+          <option>News & Presentation — From 6,000 Ksh</option>
+          <option>E-Learning Narration — From 10,000 Ksh</option>
+          <option>Audiobook Narration — From 30,000 Ksh</option>
+          <option>Social Media Content — From 6,000 Ksh</option>
+          <option>News Anchoring — From 12,000 Ksh</option>
+          <option>Event MC Services — From 15,000 Ksh</option>
+          <option>Radio Production — From 20,000 Ksh</option>
+          <option>Script Writing — From 5,000 Ksh</option>
+          <option>Audio Editing & Production — From 3,000 Ksh</option>
           <option>Skiza Tune Recording — 7,500 Ksh</option>
-          <option>IVR / Phone System — From 15,000 Ksh</option>
-          <option>Social Media Voice-Over — From 6,000 Ksh (30-45 seconds)</option>
-          <option>Corporate Narration — From 7,000 Ksh (30-45 seconds)</option>
-          <option>Documentary Voice-Over — From 10,000 Ksh (per minute)</option>
-          <option>Announcement / Short Clip — From 3,000 Ksh (30 seconds)</option>
-          <option>E-Learning & Training — From 20,000 Ksh</option>
+          <option>Audiovisual Production — From 15,000 Ksh</option>
+          <option>Voice Coaching — From 10,000 Ksh</option>
+          <option>Audio Production Training — From 20,000 Ksh</option>
+          <option>Monthly Retainer — 35,000 Ksh</option>
+          <option>Per-Project Billing — Custom pricing</option>
         </select>
       </div>
 
@@ -633,37 +818,17 @@ footer strong { color: rgba(255,255,255,0.6); }
       </div>
 
       <div class="form-group">
-        <label class="form-label">Your Script or Brief</label>
-        <textarea class="form-textarea" id="script" placeholder="Paste your script here or describe what you need. Include tone, language, and special instructions..." required></textarea>
+        <label class="form-label">Your Project Details</label>
+        <textarea class="form-textarea" id="script" placeholder="Describe your project, script, or requirements. Include tone, style, and special instructions..." required></textarea>
       </div>
 
-      <button type="submit" class="submit-btn">Send Order to WhatsApp →</button>
+      <button type="submit" class="submit-btn">Submit to WhatsApp →</button>
     </form>
-
-    <div class="payment-info">
-      <div style="margin-bottom: 16px;">
-        <strong>💰 Payment Methods</strong>
-        We accept both M-Pesa and Bank Transfer. Choose the method that works best for you.
-      </div>
-      
-      <div class="payment-method">
-        <strong>📱 M-Pesa (Send Money)</strong><br>
-        Number: <strong style="color: var(--orange-light); font-size: 16px;">0701 911 822</strong><br>
-        <span style="font-size: 12px;">Use your name as reference</span>
-      </div>
-
-      <div class="payment-method">
-        <strong>🏦 KCB Bank</strong><br>
-        Account: <strong style="color: var(--orange-light); font-size: 16px;">1329048490</strong><br>
-        Till: <strong style="color: var(--orange-light); font-size: 16px;">522 522</strong><br>
-        <span style="font-size: 12px;">Use your name as reference</span>
-      </div>
-    </div>
   </div>
 </section>
 
 <section class="contact-strip">
-  <div class="contact-title">Get In Touch</div>
+  <div class="contact-title">Let's Work Together</div>
   <div class="contact-items">
     <div class="contact-item">📱<br><strong>0788 270 218</strong></div>
     <div class="contact-item">✉<br><strong>voiceofmusembi@gmail.com</strong></div>
@@ -673,8 +838,8 @@ footer strong { color: rgba(255,255,255,0.6); }
 </section>
 
 <footer>
-  <p><strong>Voice of Musembi</strong> — Professional Voice-Over Services — © 2026 All Rights Reserved</p>
-  <p style="margin-top:12px;">Bringing Words to Life | Nairobi, Kenya | English · Swahili · Kikamba</p>
+  <p><strong>Voice of Musembi</strong> — Audio Production Studio & Voice Services — © 2026 All Rights Reserved</p>
+  <p style="margin-top:12px;">Professional Audio Production • Voice-Overs • Training • Sound Design | Nairobi, Kenya</p>
 </footer>
 
 <script>
@@ -696,20 +861,19 @@ function handleSubmit(event) {
   const script = document.getElementById('script').value;
   
   const message = encodeURIComponent(
-    `*NEW VOICE-OVER ORDER*\n\n` +
+    `*NEW PROJECT INQUIRY*\n\n` +
     `*Name:* ${name}\n` +
     `*Phone:* ${phone}\n` +
     `*Email:* ${email}\n` +
-    `*Business:* ${business}\n` +
+    `*Company:* ${business}\n` +
     `*Service:* ${service}\n` +
     `*Language:* ${language}\n\n` +
-    `*Script/Brief:*\n${script}`
+    `*Project Details:*\n${script}`
   );
   
-  // Send directly to business WhatsApp
   window.open(`https://wa.me/254788270218?text=${message}`, '_blank');
   
-  alert('Order sent to WhatsApp! Please proceed with payment to either M-Pesa (0701 911 822) or KCB (1329048490). We will contact you to confirm.');
+  alert('Project inquiry sent! We will contact you shortly with details and payment information.');
   document.querySelector('form').reset();
 }
 </script>
