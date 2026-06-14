@@ -430,6 +430,173 @@ body {
 
 .why-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
 
+/* ===== ABOUT ME ===== */
+.about-section {
+  padding: 80px 40px;
+  background: var(--white);
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-photo-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-top: 5px solid var(--orange);
+  border-left: 5px solid var(--blue);
+  box-shadow: 12px 12px 0px var(--light-blue);
+}
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--light-blue);
+  border-top: 5px solid var(--orange);
+  border-left: 5px solid var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--gray);
+  gap: 12px;
+}
+
+.photo-placeholder span {
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.about-photo-badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--orange);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(232,114,26,0.3);
+}
+
+.about-bio {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.about-bio strong { color: var(--text); }
+
+.about-credentials {
+  margin: 24px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.credential {
+  font-size: 13px;
+  color: var(--text);
+  padding: 10px 14px;
+  background: var(--cream);
+  border-left: 3px solid var(--orange);
+  font-weight: 500;
+}
+
+.about-socials {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 28px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 160px;
+}
+
+.social-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+.social-btn.facebook { background: #1877F2; }
+.social-btn.tiktok   { background: #010101; }
+
+.social-icon {
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  width: 28px;
+  text-align: center;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-name {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.social-handle {
+  font-size: 13px;
+  color: white;
+  font-weight: 700;
+}
+
+.about-cta {
+  display: inline-block;
+  background: var(--blue-dark);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 32px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.about-cta:hover {
+  background: var(--orange);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-photo-wrap { max-width: 320px; margin: 0 auto; }
+}
+
 /* ===== SERVICES ===== */
 .services-grid {
   display: grid;
@@ -827,6 +994,62 @@ footer strong { color: rgba(255,255,255,0.6); }
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ME ===== -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+
+    <!-- PHOTO COLUMN -->
+    <div class="about-photo-col">
+      <div class="about-photo-wrap">
+        <img 
+          src="photo.jpg" 
+          alt="Kelvin Musembi — Voice of Musembi" 
+          class="about-photo"
+          onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷<br><span>Upload photo.jpg<br>to GitHub</span></div>'"
+        >
+        <div class="about-photo-badge">🎙 Available for Projects</div>
+      </div>
+    </div>
+
+    <!-- TEXT COLUMN -->
+    <div class="about-text-col">
+      <div class="section-label">The Voice Behind the Brand</div>
+      <h2 class="section-title" style="margin-bottom:20px;">About <em>Me</em></h2>
+
+      <p class="about-bio">
+        I'm <strong>Kelvin Musembi</strong> — a broadcast-trained voice artist and audio production professional based in Nairobi, Kenya. Operating under the brand <strong>Voice of Musembi</strong>, I deliver professional voice-overs in <strong>English, Swahili, and Kikamba</strong> with clarity, authority, and emotion — giving your brand the voice it deserves.
+      </p>
+
+      <div class="about-credentials">
+        <div class="credential">🎓 Broadcast Journalism — Multimedia University of Kenya</div>
+        <div class="credential">🌍 Languages — English • Swahili • Kikamba</div>
+        <div class="credential">🏆 420K+ Followers | 2M+ Likes across social media</div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="about-socials">
+        <a href="https://www.facebook.com/VoiceOfMusembi" target="_blank" class="social-btn facebook">
+          <span class="social-icon">f</span>
+          <span class="social-info">
+            <span class="social-name">Facebook</span>
+            <span class="social-handle">@VoiceOfMusembi</span>
+          </span>
+        </a>
+        <a href="https://www.tiktok.com/@VoiceOfMusembi" target="_blank" class="social-btn tiktok">
+          <span class="social-icon">♪</span>
+          <span class="social-info">
+            <span class="social-name">TikTok</span>
+            <span class="social-handle">@VoiceOfMusembi</span>
+          </span>
+        </a>
+      </div>
+
+      <a href="#contact" class="about-cta">Work With Me →</a>
+    </div>
+
   </div>
 </section>
 
