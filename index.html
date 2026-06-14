@@ -266,6 +266,58 @@ body {
   font-weight: 300;
 }
 
+/* ===== STATS STRIP ===== */
+.stats-strip {
+  background: var(--orange);
+  padding: 28px 40px;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 8px 40px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .stat-divider { display: none; }
+  .stat-item { min-width: 140px; padding: 12px 20px; }
+  .stat-number { font-size: 34px; }
+}
+
 /* ===== DEMOS ===== */
 .demos-grid {
   display: grid;
@@ -664,6 +716,31 @@ footer strong { color: rgba(255,255,255,0.6); }
     <div class="hero-buttons">
       <a href="#contact" class="hero-cta">Request a Quote →</a>
       <a href="#demos" class="hero-cta outline">Listen to Demos ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<section class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number">420K+</div>
+      <div class="stat-label">Followers on Facebook & TikTok</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-number">2M+</div>
+      <div class="stat-label">Likes Across Social Media</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-number">100+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Languages — EN / SW / Kikamba</div>
     </div>
   </div>
 </section>
