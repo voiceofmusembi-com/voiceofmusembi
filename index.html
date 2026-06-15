@@ -1239,7 +1239,7 @@ footer strong { color: rgba(255,255,255,0.6); }
     </form>
 
     <div class="contact-alts">
-      <a href="https://wa.me/254788270218" target="_blank" class="wa-btn">💬 WhatsApp: 0788 270 218</a>
+      <a href="whatsapp://send?phone=254788270218" class="wa-btn">💬 WhatsApp: 0788 270 218</a>
       <a href="tel:+254701911822" class="call-btn">📞 Call: 0701 911 822</a>
     </div>
 
@@ -1305,8 +1305,20 @@ function handleSubmit(event) {
     `*Project Details:*\n${script}`
   );
 
-  window.open(`https://wa.me/254788270218?text=${message}`, '_blank');
-  alert('Your inquiry has been sent! We will respond shortly.');
+  const number = '254788270218';
+
+  // Open WhatsApp app directly based on device
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(ua)) {
+    window.location.href = `intent://send?phone=${number}&text=${message}#Intent;scheme=whatsapp;package=com.whatsapp;end`;
+  } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+    window.location.href = `whatsapp://send?phone=${number}&text=${message}`;
+  } else {
+    window.open(`https://web.whatsapp.com/send?phone=${number}&text=${message}`, '_blank');
+  }
+
+  alert('Opening WhatsApp with your inquiry ✅');
   document.querySelector('form').reset();
 }
 </script>
