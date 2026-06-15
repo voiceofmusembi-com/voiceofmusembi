@@ -1296,6 +1296,24 @@ footer strong { color: rgba(255,255,255,0.6); }
 <!-- SUCCESS BANNER -->
 <div id="success-banner">✅ Sending your inquiry via WhatsApp...</div>
 
+<!-- IN-APP BROWSER WARNING -->
+<div id="inapp-warning" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; padding:24px;">
+  <div style="background:white; padding:32px 24px; max-width:360px; width:100%; text-align:center; border-top:4px solid #E8721A;">
+    <div style="font-size:36px; margin-bottom:12px;">📱</div>
+    <h3 style="font-family:sans-serif; color:#0D2F6B; font-size:18px; margin-bottom:10px;">Open in Chrome or Safari</h3>
+    <p style="font-family:sans-serif; font-size:13px; color:#5A6678; line-height:1.6; margin-bottom:20px;">
+      You're using the TikTok or Facebook browser which blocks WhatsApp from opening.<br><br>
+      <strong>Tap the 3 dots (⋯) at the top right</strong> and select <strong>"Open in Chrome"</strong> or <strong>"Open in Browser"</strong>, then submit again.
+    </p>
+    <a id="inapp-wa-link" href="#" style="display:block; background:#25D366; color:white; font-weight:700; font-size:14px; padding:14px; text-decoration:none; margin-bottom:12px;">
+      💬 Try Opening WhatsApp Anyway
+    </a>
+    <button onclick="document.getElementById('inapp-warning').style.display='none'" style="background:none; border:1px solid #ddd; color:#5A6678; font-size:13px; padding:10px 20px; cursor:pointer; width:100%;">
+      Close
+    </button>
+  </div>
+</div>
+
 <script>
 function selectService(serviceName) {
   const sel = document.getElementById('service');
@@ -1328,6 +1346,23 @@ function handleSubmit(event) {
 
   const number = '254788270218';
   const waURL = `https://api.whatsapp.com/send?phone=${number}&text=${message}`;
+
+  // Detect in-app browsers (TikTok, Facebook, Instagram)
+  const ua = navigator.userAgent || '';
+  const isInAppBrowser = /FBAN|FBAV|Instagram|BytedanceWebview|musical_ly|TikTok|FB_IAB|FBIOS|FB4A/i.test(ua);
+
+  if (isInAppBrowser) {
+    // Show the in-app browser warning instead
+    document.querySelector('form').reset();
+    const warning = document.getElementById('inapp-warning');
+    if (warning) {
+      warning.style.display = 'flex';
+      // Store the URL for the copy button
+      document.getElementById('inapp-url').textContent = waURL;
+      document.getElementById('inapp-wa-link').href = waURL;
+    }
+    return;
+  }
 
   // Show success banner
   const banner = document.getElementById('success-banner');
