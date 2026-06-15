@@ -838,6 +838,24 @@ body {
   .payment-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== SUCCESS BANNER ===== */
+#success-banner {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #25D366;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 28px;
+  z-index: 9999;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  border-radius: 4px;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: var(--text);
@@ -1275,6 +1293,9 @@ footer strong { color: rgba(255,255,255,0.6); }
   <p style="margin-top:10px;">© 2026 All Rights Reserved &nbsp;|&nbsp; voiceofmusembi.co.ke &nbsp;|&nbsp; @VoiceOfMusembi on Facebook & TikTok</p>
 </footer>
 
+<!-- SUCCESS BANNER -->
+<div id="success-banner">✅ Sending your inquiry via WhatsApp...</div>
+
 <script>
 function selectService(serviceName) {
   const sel = document.getElementById('service');
@@ -1306,20 +1327,22 @@ function handleSubmit(event) {
   );
 
   const number = '254788270218';
+  const waURL = `https://api.whatsapp.com/send?phone=${number}&text=${message}`;
 
-  // Open WhatsApp app directly based on device
-  const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-  if (/android/i.test(ua)) {
-    window.location.href = `intent://send?phone=${number}&text=${message}#Intent;scheme=whatsapp;package=com.whatsapp;end`;
-  } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-    window.location.href = `whatsapp://send?phone=${number}&text=${message}`;
-  } else {
-    window.open(`https://web.whatsapp.com/send?phone=${number}&text=${message}`, '_blank');
+  // Show success banner
+  const banner = document.getElementById('success-banner');
+  if (banner) {
+    banner.style.display = 'block';
+    setTimeout(() => { banner.style.display = 'none'; }, 5000);
   }
 
-  alert('Opening WhatsApp with your inquiry ✅');
+  // Reset form
   document.querySelector('form').reset();
+
+  // Open WhatsApp after short delay so form resets cleanly
+  setTimeout(() => {
+    window.location.href = waURL;
+  }, 300);
 }
 </script>
 
