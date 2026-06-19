@@ -4,11 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
 <!-- SEO: Page Title -->
-<title>Voice of Musembi — Professional Voice-Over Artist & Audio Production | Nairobi, Kenya</title>
+<title>Voice of Musembi — Voice-Over Artist & Audio Producer | Nairobi, Kenya</title>
 
 <!-- SEO: Meta Description -->
-<meta name="description" content="Voice of Musembi is a professional voice-over artist and audio production studio based in Nairobi, Kenya. Specialising in radio commercials, corporate narration, radio imaging, documentaries, e-learning, and multilingual voice-overs in English, Swahili, and Kikamba.">
+<meta name="description" content="Voice over artist and audio producer. Nairobi, Kenya.">
 
 <!-- SEO: Meta Keywords -->
 <meta name="keywords" content="voice over Kenya, Nairobi voice artist, radio imaging Kenya, narration services Kenya, commercial voice over Nairobi, audio production Kenya, voice over artist Kenya, Swahili voice over, Kikamba voice over, corporate narration Kenya, e-learning narration Kenya, documentary narration Kenya, professional voice artist Nairobi">
@@ -18,8 +22,8 @@
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn previews) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Voice of Musembi — Professional Voice-Over Artist | Nairobi, Kenya">
-<meta property="og:description" content="Professional voice-over artist and audio production studio in Nairobi. Radio, TV, corporate, documentary, e-learning, and multilingual voice-overs in English, Swahili & Kikamba.">
+<meta property="og:title" content="Voice of Musembi — Voice-Over Artist & Audio Producer">
+<meta property="og:description" content="Voice over artist and audio producer. Nairobi, Kenya.">
 <meta property="og:image" content="https://voiceofmusembi.co.ke/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -29,8 +33,8 @@
 
 <!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Voice of Musembi — Professional Voice-Over Artist | Nairobi, Kenya">
-<meta name="twitter:description" content="Professional voice-over artist and audio production studio in Nairobi. Radio, TV, corporate, documentary, e-learning, and multilingual voice-overs.">
+<meta name="twitter:title" content="Voice of Musembi — Voice-Over Artist & Audio Producer">
+<meta name="twitter:description" content="Voice over artist and audio producer. Nairobi, Kenya.">
 <meta name="twitter:image" content="https://voiceofmusembi.co.ke/og-image.png">
 <meta name="twitter:site" content="@VoiceOfMusembi">
 
@@ -74,7 +78,7 @@ body {
   padding: 12px 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid rgba(232,114,26,0.2);
 }
 
@@ -257,6 +261,40 @@ body {
   max-width: 640px;
   margin-bottom: 48px;
   font-weight: 300;
+}
+
+/* ===== HOW IT WORKS BANNER ===== */
+.how-it-works {
+  background: var(--orange-light);
+  padding: 16px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.how-it-works-icon {
+  font-size: 18px;
+  animation: bounceDown 1.4s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.how-it-works-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 480px) {
+  .how-it-works { padding: 12px 16px; }
+  .how-it-works-text { font-size: 12px; }
 }
 
 /* ===== STATS STRIP ===== */
@@ -878,7 +916,6 @@ footer strong { color: rgba(255,255,255,0.6); }
     <img src="logo.png" alt="Voice of Musembi Logo" onerror="this.style.display='none'">
     <div class="navbar-logo-text">Voice of <span>Musembi</span></div>
   </a>
-  <a href="#contact" class="navbar-cta">Request a Quote →</a>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -892,11 +929,17 @@ footer strong { color: rgba(255,255,255,0.6); }
     <p class="hero-subtitle">Professional Voice-Over Services & Audio Production</p>
     <p class="hero-sub">Broadcast-quality voice-overs for radio, TV, corporate, and digital media. English • Swahili • Kikamba. Based in Nairobi, Kenya.</p>
     <div class="hero-buttons">
-      <a href="#contact" class="hero-cta">Request a Quote →</a>
+      <a href="#services" class="hero-cta">View Voice-Over Types →</a>
       <a href="#demos" class="hero-cta outline">Listen to Demos ↓</a>
     </div>
   </div>
 </section>
+
+<!-- ===== HOW IT WORKS BANNER ===== -->
+<div class="how-it-works">
+  <span class="how-it-works-icon">👇</span>
+  <span class="how-it-works-text">Tap on the voice-over type below that matches your project to request a quote</span>
+</div>
 
 <!-- ===== STATS STRIP ===== -->
 <section class="stats-strip">
@@ -923,53 +966,84 @@ footer strong { color: rgba(255,255,255,0.6); }
   </div>
 </section>
 
-<!-- ===== DEMOS ===== -->
-<section class="section" id="demos">
-  <div class="section-label">Listen & Explore</div>
-  <h2 class="section-title">Here Are Some of My <em>Work & Productions</em></h2>
-  <p class="section-intro">Listen to a selection of voice styles including commercials, radio imaging, narration, promos, and creative voice experiments.</p>
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="section-label">What We Offer</div>
+  <h2 class="section-title">Voice-Over <em>Services</em></h2>
+  <p class="section-intro">Tap a service below to select it and jump straight to the booking form.</p>
 
-  <div class="demos-grid">
-    <div class="demo-card">
-      <div class="demo-label">Demo 01</div>
-      <div class="demo-player"><audio controls><source src="demo-1.mp3" type="audio/mpeg"></audio></div>
+  <div class="services-grid">
+
+    <div class="service-card" onclick="selectService('Commercial Voice-Overs')">
+      <div class="service-icon">📻</div>
+      <div class="service-name">Commercial Voice-Overs</div>
+      <div class="service-desc">Radio ads, TV commercials, social media adverts, and product promotions.</div>
+      <div class="service-price">Starting from Ksh 10,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 02</div>
-      <div class="demo-player"><audio controls><source src="demo-2.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Corporate Narration')">
+      <div class="service-icon">🏢</div>
+      <div class="service-name">Corporate Narration</div>
+      <div class="service-desc">Company profile videos, corporate presentations, explainer videos, and training content.</div>
+      <div class="service-price">Starting from Ksh 10,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 03</div>
-      <div class="demo-player"><audio controls><source src="demo-3.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Radio & Broadcast Imaging')">
+      <div class="service-icon">📡</div>
+      <div class="service-name">Radio & Broadcast Imaging</div>
+      <div class="service-desc">Station IDs, show promos, program intros, sweepers and liners for radio and TV.</div>
+      <div class="service-price">Starting from Ksh 8,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 04</div>
-      <div class="demo-player"><audio controls><source src="demo-4.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Documentary Narration')">
+      <div class="service-icon">🎬</div>
+      <div class="service-name">Documentary Narration</div>
+      <div class="service-desc">Documentaries, educational content, historical features, and environmental stories.</div>
+      <div class="service-price">Starting from Ksh 10,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 05</div>
-      <div class="demo-player"><audio controls><source src="demo-5.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Event Promotions')">
+      <div class="service-icon">🎪</div>
+      <div class="service-name">Event Promotions</div>
+      <div class="service-desc">Concert promos, festival campaigns, roadshows, and product launch promotions.</div>
+      <div class="service-price">Starting from Ksh 7,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 06</div>
-      <div class="demo-player"><audio controls><source src="demo-6.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Skiza Tunes')">
+      <div class="service-icon">📱</div>
+      <div class="service-name">Skiza Tunes</div>
+      <div class="service-desc">Custom Safaricom Skiza ringback tones for personal brands, businesses, and public figures.</div>
+      <div class="service-price">Ksh 7,500</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 07</div>
-      <div class="demo-player"><audio controls><source src="demo-7.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Public Announcements')">
+      <div class="service-icon">📢</div>
+      <div class="service-name">Public Announcements</div>
+      <div class="service-desc">Government campaigns, NGO awareness, road safety messages, and public service announcements.</div>
+      <div class="service-price">Starting from Ksh 15,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 08</div>
-      <div class="demo-player"><audio controls><source src="demo-8.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('E-Learning Narration')">
+      <div class="service-icon">📚</div>
+      <div class="service-name">E-Learning Narration</div>
+      <div class="service-desc">Online courses, educational modules, school content, and training programs.</div>
+      <div class="service-price">Starting from Ksh 10,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 09</div>
-      <div class="demo-player"><audio controls><source src="demo-9.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Real Estate Voice-Overs')">
+      <div class="service-icon">🏠</div>
+      <div class="service-name">Real Estate Voice-Overs</div>
+      <div class="service-desc">Property showcases, land sales promotions, Airbnb listings, and virtual property tours.</div>
+      <div class="service-price">Starting from Ksh 8,000</div>
     </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 10</div>
-      <div class="demo-player"><audio controls><source src="demo-10.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="service-card" onclick="selectService('Social Media Voice-Overs')">
+      <div class="service-icon">📱</div>
+      <div class="service-name">Social Media Voice-Overs</div>
+      <div class="service-desc">TikTok voice-overs, YouTube narration, Facebook video narration, and Reels & Shorts.</div>
+      <div class="service-price">Starting from Ksh 8,000</div>
     </div>
+
   </div>
 </section>
 
@@ -1064,84 +1138,53 @@ footer strong { color: rgba(255,255,255,0.6); }
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section class="section" id="services">
-  <div class="section-label">What We Offer</div>
-  <h2 class="section-title">Voice-Over <em>Services</em></h2>
-  <p class="section-intro">Click any service to go straight to the booking form.</p>
+<!-- ===== DEMOS ===== -->
+<section class="section" id="demos">
+  <div class="section-label">Listen & Explore</div>
+  <h2 class="section-title">Here Are Some of My <em>Work & Productions</em></h2>
+  <p class="section-intro">Listen to a selection of voice styles including commercials, radio imaging, narration, promos, and creative voice experiments.</p>
 
-  <div class="services-grid">
-
-    <div class="service-card" onclick="selectService('Commercial Voice-Overs')">
-      <div class="service-icon">📻</div>
-      <div class="service-name">Commercial Voice-Overs</div>
-      <div class="service-desc">Radio ads, TV commercials, social media adverts, and product promotions.</div>
-      <div class="service-price">Starting from Ksh 10,000</div>
+  <div class="demos-grid">
+    <div class="demo-card">
+      <div class="demo-label">Demo 01</div>
+      <div class="demo-player"><audio controls><source src="demo-1.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Corporate Narration')">
-      <div class="service-icon">🏢</div>
-      <div class="service-name">Corporate Narration</div>
-      <div class="service-desc">Company profile videos, corporate presentations, explainer videos, and training content.</div>
-      <div class="service-price">Starting from Ksh 10,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 02</div>
+      <div class="demo-player"><audio controls><source src="demo-2.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Radio & Broadcast Imaging')">
-      <div class="service-icon">📡</div>
-      <div class="service-name">Radio & Broadcast Imaging</div>
-      <div class="service-desc">Station IDs, show promos, program intros, sweepers and liners for radio and TV.</div>
-      <div class="service-price">Starting from Ksh 8,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 03</div>
+      <div class="demo-player"><audio controls><source src="demo-3.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Documentary Narration')">
-      <div class="service-icon">🎬</div>
-      <div class="service-name">Documentary Narration</div>
-      <div class="service-desc">Documentaries, educational content, historical features, and environmental stories.</div>
-      <div class="service-price">Starting from Ksh 10,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 04</div>
+      <div class="demo-player"><audio controls><source src="demo-4.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Event Promotions')">
-      <div class="service-icon">🎪</div>
-      <div class="service-name">Event Promotions</div>
-      <div class="service-desc">Concert promos, festival campaigns, roadshows, and product launch promotions.</div>
-      <div class="service-price">Starting from Ksh 7,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 05</div>
+      <div class="demo-player"><audio controls><source src="demo-5.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Skiza Tunes')">
-      <div class="service-icon">📱</div>
-      <div class="service-name">Skiza Tunes</div>
-      <div class="service-desc">Custom Safaricom Skiza ringback tones for personal brands, businesses, and public figures.</div>
-      <div class="service-price">Ksh 7,500</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 06</div>
+      <div class="demo-player"><audio controls><source src="demo-6.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Public Announcements')">
-      <div class="service-icon">📢</div>
-      <div class="service-name">Public Announcements</div>
-      <div class="service-desc">Government campaigns, NGO awareness, road safety messages, and public service announcements.</div>
-      <div class="service-price">Starting from Ksh 15,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 07</div>
+      <div class="demo-player"><audio controls><source src="demo-7.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('E-Learning Narration')">
-      <div class="service-icon">📚</div>
-      <div class="service-name">E-Learning Narration</div>
-      <div class="service-desc">Online courses, educational modules, school content, and training programs.</div>
-      <div class="service-price">Starting from Ksh 10,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 08</div>
+      <div class="demo-player"><audio controls><source src="demo-8.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Real Estate Voice-Overs')">
-      <div class="service-icon">🏠</div>
-      <div class="service-name">Real Estate Voice-Overs</div>
-      <div class="service-desc">Property showcases, land sales promotions, Airbnb listings, and virtual property tours.</div>
-      <div class="service-price">Starting from Ksh 8,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 09</div>
+      <div class="demo-player"><audio controls><source src="demo-9.mp3" type="audio/mpeg"></audio></div>
     </div>
-
-    <div class="service-card" onclick="selectService('Social Media Voice-Overs')">
-      <div class="service-icon">📱</div>
-      <div class="service-name">Social Media Voice-Overs</div>
-      <div class="service-desc">TikTok voice-overs, YouTube narration, Facebook video narration, and Reels & Shorts.</div>
-      <div class="service-price">Starting from Ksh 8,000</div>
+    <div class="demo-card">
+      <div class="demo-label">Demo 10</div>
+      <div class="demo-player"><audio controls><source src="demo-10.mp3" type="audio/mpeg"></audio></div>
     </div>
-
   </div>
 </section>
 
@@ -1285,23 +1328,7 @@ footer strong { color: rgba(255,255,255,0.6); }
 <!-- SUCCESS BANNER -->
 <div id="success-banner">✅ Sending your inquiry via WhatsApp...</div>
 
-<!-- IN-APP BROWSER WARNING -->
-<div id="inapp-warning" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; padding:24px;">
-  <div style="background:white; padding:32px 24px; max-width:360px; width:100%; text-align:center; border-top:4px solid #E8721A;">
-    <div style="font-size:36px; margin-bottom:12px;">📱</div>
-    <h3 style="font-family:sans-serif; color:#0D2F6B; font-size:18px; margin-bottom:10px;">Open in Chrome or Safari</h3>
-    <p style="font-family:sans-serif; font-size:13px; color:#5A6678; line-height:1.6; margin-bottom:20px;">
-      You're using the TikTok or Facebook browser which blocks WhatsApp from opening.<br><br>
-      <strong>Tap the 3 dots (⋯) at the top right</strong> and select <strong>"Open in Chrome"</strong> or <strong>"Open in Browser"</strong>, then submit again.
-    </p>
-    <a id="inapp-wa-link" href="#" style="display:block; background:#25D366; color:white; font-weight:700; font-size:14px; padding:14px; text-decoration:none; margin-bottom:12px;">
-      💬 Try Opening WhatsApp Anyway
-    </a>
-    <button onclick="document.getElementById('inapp-warning').style.display='none'" style="background:none; border:1px solid #ddd; color:#5A6678; font-size:13px; padding:10px 20px; cursor:pointer; width:100%;">
-      Close
-    </button>
-  </div>
-</div>
+
 
 <script>
 function selectService(serviceName) {
@@ -1336,23 +1363,6 @@ function handleSubmit(event) {
   const number = '254788270218';
   const waURL = `https://api.whatsapp.com/send?phone=${number}&text=${message}`;
 
-  // Detect in-app browsers (TikTok, Facebook, Instagram)
-  const ua = navigator.userAgent || '';
-  const isInAppBrowser = /FBAN|FBAV|Instagram|BytedanceWebview|musical_ly|TikTok|FB_IAB|FBIOS|FB4A/i.test(ua);
-
-  if (isInAppBrowser) {
-    // Show the in-app browser warning instead
-    document.querySelector('form').reset();
-    const warning = document.getElementById('inapp-warning');
-    if (warning) {
-      warning.style.display = 'flex';
-      // Store the URL for the copy button
-      document.getElementById('inapp-url').textContent = waURL;
-      document.getElementById('inapp-wa-link').href = waURL;
-    }
-    return;
-  }
-
   // Show success banner
   const banner = document.getElementById('success-banner');
   if (banner) {
@@ -1363,7 +1373,7 @@ function handleSubmit(event) {
   // Reset form
   document.querySelector('form').reset();
 
-  // Open WhatsApp after short delay so form resets cleanly
+  // Open WhatsApp directly — works across normal browsers and TikTok/Facebook in-app browsers
   setTimeout(() => {
     window.location.href = waURL;
   }, 300);
