@@ -741,6 +741,34 @@ body {
   font-style: italic;
 }
 
+.swahili-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.swahili-card {
+  background: var(--light-blue);
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.swahili-card-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.swahili-card audio {
+  width: 100%;
+  height: 32px;
+}
+
 .form-label {
   display: block;
   font-size: 11px;
@@ -1156,6 +1184,32 @@ footer strong { color: rgba(255,255,255,0.6); }
       <button class="service-select-btn" onclick="selectService('DJ Drops')">Select & Request Quote →</button>
     </div>
 
+  </div>
+</section>
+
+<!-- ===== KISWAHILI DEMOS ===== -->
+<section class="section" id="kiswahili">
+  <div class="section-label">Also Fluent In</div>
+  <h2 class="section-title">Kiswahili <em>Demos</em></h2>
+  <p class="section-intro">We do English and Swahili voice-overs. Here are some Kiswahili samples.</p>
+
+  <div class="swahili-grid">
+    <div class="swahili-card">
+      <div class="swahili-card-label">Demo 1</div>
+      <audio controls><source src="swahili-demo-1.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="swahili-card">
+      <div class="swahili-card-label">Demo 2</div>
+      <audio controls><source src="swahili-demo-2.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="swahili-card">
+      <div class="swahili-card-label">Demo 3</div>
+      <audio controls><source src="swahili-demo-3.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="swahili-card">
+      <div class="swahili-card-label">Demo 4</div>
+      <audio controls><source src="swahili-demo-4.mp3" type="audio/mpeg"></audio>
+    </div>
   </div>
 </section>
 
