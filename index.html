@@ -12,7 +12,7 @@
 <title>Voice of Musembi — Voice-Over Artist & Audio Producer | Nairobi, Kenya</title>
 
 <!-- SEO: Meta Description -->
-<meta name="description" content="Voice over artist and audio producer. Nairobi, Kenya.">
+<meta name="description" content="Professional voice-over artist and audio producer in Nairobi, Kenya. Commercial, corporate, radio imaging, e-learning and Skiza voice-overs in English, Swahili & Kikamba. Request a quote online.">
 
 <!-- SEO: Meta Keywords -->
 <meta name="keywords" content="voice over Kenya, Nairobi voice artist, radio imaging Kenya, narration services Kenya, commercial voice over Nairobi, audio production Kenya, voice over artist Kenya, Swahili voice over, Kikamba voice over, corporate narration Kenya, e-learning narration Kenya, documentary narration Kenya, professional voice artist Nairobi">
@@ -23,7 +23,7 @@
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn previews) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Voice of Musembi — Voice-Over Artist & Audio Producer">
-<meta property="og:description" content="Voice over artist and audio producer. Nairobi, Kenya.">
+<meta property="og:description" content="Professional voice-over artist and audio producer in Nairobi, Kenya. Commercial, corporate, radio imaging, e-learning and Skiza voice-overs in English, Swahili & Kikamba.">
 <meta property="og:image" content="https://voiceofmusembi.co.ke/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -669,11 +669,54 @@ body {
 }
 
 .service-price {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--orange);
-  font-weight: 500;
-  margin-top: 8px;
+  font-weight: 700;
+  margin-top: 4px;
 }
+
+.service-price.quote {
+  color: var(--blue);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.service-listen {
+  margin-top: 10px;
+  background: var(--light-blue);
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+
+.service-listen-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gray);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.service-listen audio {
+  width: 100%;
+  height: 28px;
+}
+
+.service-select-btn {
+  margin-top: 12px;
+  background: var(--blue-dark);
+  color: white;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.service-select-btn:hover { background: var(--orange); }
 
 /* ===== CONTACT ===== */
 .contact-section {
@@ -690,6 +733,13 @@ body {
 .contact-section .section-intro { color: rgba(255,255,255,0.55); margin-bottom: 36px; }
 
 .form-group { margin-bottom: 18px; }
+
+.form-hint {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 6px;
+  font-style: italic;
+}
 
 .form-label {
   display: block;
@@ -929,8 +979,8 @@ footer strong { color: rgba(255,255,255,0.6); }
     <p class="hero-subtitle">Professional Voice-Over Services & Audio Production</p>
     <p class="hero-sub">Broadcast-quality voice-overs for radio, TV, corporate, and digital media. English • Swahili • Kikamba. Based in Nairobi, Kenya.</p>
     <div class="hero-buttons">
-      <a href="#services" class="hero-cta">View Voice-Over Types →</a>
-      <a href="#demos" class="hero-cta outline">Listen to Demos ↓</a>
+      <a href="#contact" class="hero-cta">Start Your Project →</a>
+      <a href="#services" class="hero-cta outline">Browse Services & Demos ↓</a>
     </div>
   </div>
 </section>
@@ -938,7 +988,7 @@ footer strong { color: rgba(255,255,255,0.6); }
 <!-- ===== HOW IT WORKS BANNER ===== -->
 <div class="how-it-works">
   <span class="how-it-works-icon">👇</span>
-  <span class="how-it-works-text">Tap on the voice-over type below that matches your project to request a quote</span>
+  <span class="how-it-works-text">Tap a service below, listen to a sample, then fill in your project details — no back-and-forth needed</span>
 </div>
 
 <!-- ===== STATS STRIP ===== -->
@@ -969,79 +1019,141 @@ footer strong { color: rgba(255,255,255,0.6); }
 <!-- ===== SERVICES ===== -->
 <section class="section" id="services">
   <div class="section-label">What We Offer</div>
-  <h2 class="section-title">Voice-Over <em>Services</em></h2>
-  <p class="section-intro">Tap a service below to select it and jump straight to the booking form.</p>
+  <h2 class="section-title">Services <em>& Demos</em></h2>
+  <p class="section-intro">Listen to a sample for each service, then tap "Select & Request Quote" to jump straight to the booking form with that category pre-filled.</p>
 
   <div class="services-grid">
 
-    <div class="service-card" onclick="selectService('Commercial Voice-Overs')">
+    <div class="service-card">
       <div class="service-icon">📻</div>
       <div class="service-name">Commercial Voice-Overs</div>
       <div class="service-desc">Radio ads, TV commercials, social media adverts, and product promotions.</div>
-      
+      <div class="service-price">From KSh 6,000</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="commercial-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Commercial Voice-Overs')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Corporate Narration')">
+    <div class="service-card">
       <div class="service-icon">🏢</div>
       <div class="service-name">Corporate Narration</div>
       <div class="service-desc">Company profile videos, corporate presentations, explainer videos, and training content.</div>
-      
+      <div class="service-price">From KSh 15,000</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="corporate-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Corporate Narration')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Radio & Broadcast Imaging')">
+    <div class="service-card">
       <div class="service-icon">📡</div>
       <div class="service-name">Radio & Broadcast Imaging</div>
       <div class="service-desc">Station IDs, show promos, program intros, sweepers and liners for radio and TV.</div>
-      
+      <div class="service-price quote">Custom Quote</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="radio-imaging-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Radio & Broadcast Imaging')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Documentary Narration')">
+    <div class="service-card">
       <div class="service-icon">🎬</div>
       <div class="service-name">Documentary Narration</div>
       <div class="service-desc">Documentaries, educational content, historical features, and environmental stories.</div>
-      
+      <div class="service-price">From KSh 30,000</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="documentary-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Documentary Narration')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Event Promotions')">
+    <div class="service-card">
       <div class="service-icon">🎪</div>
       <div class="service-name">Event Promotions</div>
       <div class="service-desc">Concert promos, festival campaigns, roadshows, and product launch promotions.</div>
-      
+      <div class="service-price quote">Custom Quote</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="event-promo-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Event Promotions')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Skiza Tunes')">
+    <div class="service-card">
       <div class="service-icon">📱</div>
       <div class="service-name">Skiza Tunes</div>
       <div class="service-desc">Custom Safaricom Skiza ringback tones for personal brands, businesses, and public figures.</div>
-      
+      <div class="service-price">KSh 5,000</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="skiza-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Skiza Tunes')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Public Announcements')">
+    <div class="service-card">
       <div class="service-icon">📢</div>
       <div class="service-name">Public Announcements</div>
       <div class="service-desc">Government campaigns, NGO awareness, road safety messages, and public service announcements.</div>
-      
+      <div class="service-price quote">Custom Quote</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="public-announcement-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Public Announcements')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('E-Learning Narration')">
+    <div class="service-card">
       <div class="service-icon">📚</div>
       <div class="service-name">E-Learning Narration</div>
       <div class="service-desc">Online courses, educational modules, school content, and training programs.</div>
-      
+      <div class="service-price">From KSh 15,000 /audio hour</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="elearning-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('E-Learning Narration')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Real Estate Voice-Overs')">
+    <div class="service-card">
       <div class="service-icon">🏠</div>
       <div class="service-name">Real Estate Voice-Overs</div>
       <div class="service-desc">Property showcases, land sales promotions, Airbnb listings, and virtual property tours.</div>
-      
+      <div class="service-price quote">Custom Quote</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="real-estate-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Real Estate Voice-Overs')">Select & Request Quote →</button>
     </div>
 
-    <div class="service-card" onclick="selectService('Social Media Voice-Overs')">
+    <div class="service-card">
       <div class="service-icon">📱</div>
       <div class="service-name">Social Media Voice-Overs</div>
       <div class="service-desc">TikTok voice-overs, YouTube narration, Facebook video narration, and Reels & Shorts.</div>
-      
+      <div class="service-price">From KSh 6,000</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="social-media-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('Social Media Voice-Overs')">Select & Request Quote →</button>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🎧</div>
+      <div class="service-name">DJ Drops</div>
+      <div class="service-desc">Custom DJ name drops and tags for mixes, sets, and radio shows.</div>
+      <div class="service-price">From KSh 2,500 · Pack of 3: KSh 6,000</div>
+      <div class="service-listen">
+        <div class="service-listen-label">Sample</div>
+        <audio controls><source src="dj-drop-demo.mp3" type="audio/mpeg"></audio>
+      </div>
+      <button class="service-select-btn" onclick="selectService('DJ Drops')">Select & Request Quote →</button>
     </div>
 
   </div>
@@ -1069,6 +1181,8 @@ footer strong { color: rgba(255,255,255,0.6); }
           <div class="trusted-name">Mozzart Bet</div>
           <div class="trusted-name">Cyberpro</div>
           <div class="trusted-name">Ngumo Festival</div>
+          <div class="trusted-name">Football Kenya Federation</div>
+          <div class="trusted-name">Selmax Media Group / Orbit TV</div>
         </div>
       </div>
       <div class="trusted-group">
@@ -1138,56 +1252,6 @@ footer strong { color: rgba(255,255,255,0.6); }
   </div>
 </section>
 
-<!-- ===== DEMOS ===== -->
-<section class="section" id="demos">
-  <div class="section-label">Listen & Explore</div>
-  <h2 class="section-title">Here Are Some of My <em>Work & Productions</em></h2>
-  <p class="section-intro">Listen to a selection of voice styles including commercials, radio imaging, narration, promos, and creative voice experiments.</p>
-
-  <div class="demos-grid">
-    <div class="demo-card">
-      <div class="demo-label">Demo 01</div>
-      <div class="demo-player"><audio controls><source src="demo-1.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 02</div>
-      <div class="demo-player"><audio controls><source src="demo-2.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 03</div>
-      <div class="demo-player"><audio controls><source src="demo-3.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 04</div>
-      <div class="demo-player"><audio controls><source src="demo-4.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 05</div>
-      <div class="demo-player"><audio controls><source src="demo-5.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 06</div>
-      <div class="demo-player"><audio controls><source src="demo-6.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 07</div>
-      <div class="demo-player"><audio controls><source src="demo-7.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 08</div>
-      <div class="demo-player"><audio controls><source src="demo-8.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 09</div>
-      <div class="demo-player"><audio controls><source src="demo-9.mp3" type="audio/mpeg"></audio></div>
-    </div>
-    <div class="demo-card">
-      <div class="demo-label">Demo 10</div>
-      <div class="demo-player"><audio controls><source src="demo-10.mp3" type="audio/mpeg"></audio></div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== WHY CHOOSE ME ===== -->
 <section class="why-section">
   <div class="why-inner">
@@ -1220,6 +1284,11 @@ footer strong { color: rgba(255,255,255,0.6); }
         <div class="why-title">Custom Voice Styles</div>
         <div class="why-desc">From conversational to authoritative — adapted to match your brand's tone and target audience.</div>
       </div>
+      <div class="why-card">
+        <div class="why-icon">✍️</div>
+        <div class="why-title">Free Script Writing</div>
+        <div class="why-desc">No script yet? Every booking includes free script writing — just tell us what you're promoting.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1244,19 +1313,19 @@ footer strong { color: rgba(255,255,255,0.6); }
       </div>
 
       <div class="form-group">
-        <label class="form-label">Email Address</label>
-        <input type="email" class="form-input" id="email" placeholder="your@email.com" required>
+        <label class="form-label">Email Address (optional)</label>
+        <input type="email" class="form-input" id="email" placeholder="your@email.com">
       </div>
 
       <div class="form-group">
-        <label class="form-label">Company / Brand Name</label>
+        <label class="form-label">Business / Brand Name</label>
         <input type="text" class="form-input" id="business" placeholder="Your company or brand" required>
       </div>
 
       <div class="form-group">
-        <label class="form-label">Service Required</label>
+        <label class="form-label">Voice-Over Category</label>
         <select class="form-select" id="service" required>
-          <option value="">— Select a service —</option>
+          <option value="">— Select a category —</option>
           <option>Commercial Voice-Overs</option>
           <option>Corporate Narration</option>
           <option>Radio & Broadcast Imaging</option>
@@ -1267,27 +1336,74 @@ footer strong { color: rgba(255,255,255,0.6); }
           <option>E-Learning Narration</option>
           <option>Real Estate Voice-Overs</option>
           <option>Social Media Voice-Overs</option>
-          <option>Other / Not Listed</option>
+          <option>DJ Drops</option>
+          <option>Not Sure — Help Me Choose</option>
         </select>
+        <p class="form-hint">Not sure which one? Tell us what the ad is for and where it'll play below, and we'll match it for you.</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Intended Platform</label>
+          <select class="form-select" id="platform" required>
+            <option value="">— Select platform —</option>
+            <option>TikTok</option>
+            <option>Instagram / Facebook</option>
+            <option>YouTube</option>
+            <option>Radio</option>
+            <option>TV</option>
+            <option>IVR / Phone System</option>
+            <option>Documentary / Film</option>
+            <option>Internal / Corporate Use</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Approximate Duration</label>
+          <select class="form-select" id="duration" required>
+            <option value="">— Select duration —</option>
+            <option>Up to 15 seconds</option>
+            <option>15–30 seconds</option>
+            <option>31–60 seconds</option>
+            <option>1–2 minutes</option>
+            <option>2–5 minutes</option>
+            <option>5–10 minutes</option>
+            <option>10+ minutes</option>
+            <option>Priced per audio hour (e.g. e-learning)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Preferred Language</label>
+          <select class="form-select" id="language" required>
+            <option value="">— Select language —</option>
+            <option>English</option>
+            <option>Swahili</option>
+            <option>Kikamba</option>
+            <option>English & Swahili (Bilingual)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Deadline</label>
+          <input type="date" class="form-input" id="deadline" required>
+        </div>
       </div>
 
       <div class="form-group">
-        <label class="form-label">Preferred Language</label>
-        <select class="form-select" id="language" required>
-          <option value="">— Select language —</option>
-          <option>English</option>
-          <option>Swahili</option>
-          <option>Kikamba</option>
-          <option>English & Swahili (Bilingual)</option>
-        </select>
+        <label class="form-label">Your Script (if you have one)</label>
+        <textarea class="form-textarea" id="script" placeholder="Paste your script here. Don't have one yet? Leave this blank and describe your product/business below — script writing is free with every booking."></textarea>
+        <p class="form-hint">Have a script as a document instead? Submit this form, then attach the file directly in the WhatsApp chat that opens.</p>
       </div>
 
       <div class="form-group">
-        <label class="form-label">Project Details</label>
-        <textarea class="form-textarea" id="script" placeholder="Describe your project — include tone, script, usage, and any special requirements..." required></textarea>
+        <label class="form-label">Additional Notes</label>
+        <textarea class="form-textarea" id="notes" placeholder="Tone, target audience, what you're promoting, usage rights needed, or anything else we should know..." required></textarea>
       </div>
 
-      <p class="pricing-note">* Prices shown are starting rates. Final pricing depends on script length, usage rights, revisions, and turnaround time. A custom quote will be shared before any work begins.</p>
+      <p class="pricing-note">* Prices shown are starting rates. Final pricing depends on usage rights, revisions, and turnaround time. A confirmed quote is shared before any work begins. Script writing is free when bundled with a paid booking.</p>
 
       <button type="submit" class="submit-btn">Send Inquiry via WhatsApp →</button>
     </form>
@@ -1304,7 +1420,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="payment-title">💳 Payment</div>
       <div class="payment-grid" style="grid-template-columns:1fr;">
         <div class="payment-item">
-          <div class="payment-method">KCB Bank Transfer</div>
+          <div class="payment-method">M-Pesa / Bank via KCB Paybill</div>
           <div class="payment-detail">Paybill: <strong>522522</strong></div>
           <div class="payment-detail">Account: <strong>1329048490</strong></div>
         </div>
@@ -1346,18 +1462,26 @@ function handleSubmit(event) {
   const email    = document.getElementById('email').value;
   const business = document.getElementById('business').value;
   const service  = document.getElementById('service').value;
+  const platform = document.getElementById('platform').value;
+  const duration = document.getElementById('duration').value;
   const language = document.getElementById('language').value;
+  const deadline = document.getElementById('deadline').value;
   const script   = document.getElementById('script').value;
+  const notes    = document.getElementById('notes').value;
 
   const message = encodeURIComponent(
     `*NEW QUOTE REQUEST — Voice of Musembi*\n\n` +
     `*Name:* ${name}\n` +
     `*Phone:* ${phone}\n` +
-    `*Email:* ${email}\n` +
-    `*Company:* ${business}\n` +
-    `*Service:* ${service}\n` +
-    `*Language:* ${language}\n\n` +
-    `*Project Details:*\n${script}`
+    `*Email:* ${email || 'Not provided'}\n` +
+    `*Business:* ${business}\n` +
+    `*Category:* ${service}\n` +
+    `*Platform:* ${platform}\n` +
+    `*Duration:* ${duration}\n` +
+    `*Language:* ${language}\n` +
+    `*Deadline:* ${deadline}\n\n` +
+    `*Script:*\n${script ? script : '(No script yet — needs writing, free with booking)'}\n\n` +
+    `*Additional Notes:*\n${notes}`
   );
 
   const number = '254788270218';
