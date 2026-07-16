@@ -1056,7 +1056,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">📻</div>
       <div class="service-name">Commercial Voice-Overs</div>
       <div class="service-desc">Radio ads, TV commercials, social media adverts, and product promotions.</div>
-      <div class="service-price">From KSh 6,000</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="commercial-demo.mp3" type="audio/mpeg"></audio>
@@ -1068,7 +1068,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">🏢</div>
       <div class="service-name">Corporate Narration</div>
       <div class="service-desc">Company profile videos, corporate presentations, explainer videos, and training content.</div>
-      <div class="service-price">From KSh 15,000</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="corporate-demo.mp3" type="audio/mpeg"></audio>
@@ -1092,7 +1092,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">🎬</div>
       <div class="service-name">Documentary Narration</div>
       <div class="service-desc">Documentaries, educational content, historical features, and environmental stories.</div>
-      <div class="service-price">From KSh 30,000</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="documentary-demo.mp3" type="audio/mpeg"></audio>
@@ -1116,7 +1116,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">📱</div>
       <div class="service-name">Skiza Tunes</div>
       <div class="service-desc">Custom Safaricom Skiza ringback tones for personal brands, businesses, and public figures.</div>
-      <div class="service-price">KSh 5,000</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="skiza-demo.mp3" type="audio/mpeg"></audio>
@@ -1140,7 +1140,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">📚</div>
       <div class="service-name">E-Learning Narration</div>
       <div class="service-desc">Online courses, educational modules, school content, and training programs.</div>
-      <div class="service-price">From KSh 15,000 /audio hour</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="elearning-demo.mp3" type="audio/mpeg"></audio>
@@ -1164,7 +1164,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">📱</div>
       <div class="service-name">Social Media Voice-Overs</div>
       <div class="service-desc">TikTok voice-overs, YouTube narration, Facebook video narration, and Reels & Shorts.</div>
-      <div class="service-price">From KSh 6,000</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="social-media-demo.mp3" type="audio/mpeg"></audio>
@@ -1176,7 +1176,7 @@ footer strong { color: rgba(255,255,255,0.6); }
       <div class="service-icon">🎧</div>
       <div class="service-name">DJ Drops</div>
       <div class="service-desc">Custom DJ name drops and tags for mixes, sets, and radio shows.</div>
-      <div class="service-price">From KSh 2,500 · Pack of 3: KSh 6,000</div>
+      <div class="service-price quote">Custom Quote</div>
       <div class="service-listen">
         <div class="service-listen-label">Sample</div>
         <audio controls><source src="dj-drop-demo.mp3" type="audio/mpeg"></audio>
@@ -1377,6 +1377,11 @@ footer strong { color: rgba(255,255,255,0.6); }
       </div>
 
       <div class="form-group">
+        <label class="form-label">What Do You Deal In? (optional)</label>
+        <input type="text" class="form-input" id="businessType" placeholder="e.g. Real estate, cosmetics, or your website/social media link">
+      </div>
+
+      <div class="form-group">
         <label class="form-label">Voice-Over Category</label>
         <select class="form-select" id="service" required>
           <option value="">— Select a category —</option>
@@ -1401,14 +1406,14 @@ footer strong { color: rgba(255,255,255,0.6); }
           <label class="form-label">Intended Platform</label>
           <select class="form-select" id="platform" required>
             <option value="">— Select platform —</option>
-            <option>TikTok</option>
-            <option>Instagram / Facebook</option>
-            <option>YouTube</option>
-            <option>Radio</option>
             <option>TV</option>
+            <option>Radio</option>
+            <option>Facebook</option>
+            <option>TikTok</option>
+            <option>Instagram</option>
+            <option>YouTube</option>
+            <option>WhatsApp Status</option>
             <option>IVR / Phone System</option>
-            <option>Documentary / Film</option>
-            <option>Internal / Corporate Use</option>
             <option>Other</option>
           </select>
         </div>
@@ -1457,7 +1462,7 @@ footer strong { color: rgba(255,255,255,0.6); }
         <textarea class="form-textarea" id="notes" placeholder="Tone, target audience, what you're promoting, usage rights needed, or anything else we should know..." required></textarea>
       </div>
 
-      <p class="pricing-note">* Prices shown are starting rates. Final pricing depends on usage rights, revisions, and turnaround time. A confirmed quote is shared before any work begins. Script writing is free when bundled with a paid booking.</p>
+      <p class="pricing-note">* Every project is priced individually based on usage rights, length, and turnaround time. A confirmed quote is shared before any work begins. Script writing is free when bundled with a paid booking.</p>
 
       <button type="submit" class="submit-btn">Send Inquiry via WhatsApp →</button>
     </form>
@@ -1515,6 +1520,7 @@ function handleSubmit(event) {
   const phone    = document.getElementById('phone').value;
   const email    = document.getElementById('email').value;
   const business = document.getElementById('business').value;
+  const businessType = document.getElementById('businessType').value;
   const service  = document.getElementById('service').value;
   const platform = document.getElementById('platform').value;
   const duration = document.getElementById('duration').value;
@@ -1529,6 +1535,7 @@ function handleSubmit(event) {
     `*Phone:* ${phone}\n` +
     `*Email:* ${email || 'Not provided'}\n` +
     `*Business:* ${business}\n` +
+    `*What They Deal In:* ${businessType || 'Not provided'}\n` +
     `*Category:* ${service}\n` +
     `*Platform:* ${platform}\n` +
     `*Duration:* ${duration}\n` +
