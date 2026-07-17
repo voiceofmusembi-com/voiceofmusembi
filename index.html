@@ -985,6 +985,42 @@ footer strong { color: rgba(255,255,255,0.6); }
   .contact-alts { flex-direction: column; }
 }
 </style>
+<!-- SEO: Structured Data (helps Google show your business info directly in search results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Voice of Musembi",
+  "alternateName": "VOM",
+  "description": "Professional voice-over artist and audio producer offering commercial, corporate, radio imaging, documentary, e-learning and Skiza voice-overs in English, Swahili and Kikamba.",
+  "image": "https://voiceofmusembi.co.ke/photo.jpg",
+  "logo": "https://voiceofmusembi.co.ke/logo.png",
+  "url": "https://voiceofmusembi.co.ke/",
+  "telephone": "+254788270218",
+  "email": "voiceofmusembi@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "areaServed": "Kenya",
+  "availableLanguage": ["English", "Swahili", "Kikamba"],
+  "sameAs": [
+    "https://www.tiktok.com/@VoiceOfMusembi",
+    "https://www.facebook.com/VoiceOfMusembi"
+  ]
+}
+</script>
+
+<!-- Analytics: Replace G-XXXXXXXXXX below with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 </head>
 <body>
 
